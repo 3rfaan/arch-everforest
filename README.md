@@ -480,13 +480,18 @@ $ timedatectl set-ntp true
 ### Wayland
 
 ```
-$ sudo pacman -S hyprland wlogout swaylock swayidle
+$ sudo pacman -S hyprland wlogout swayidle
+```
+
+```
+$ yay -S swaylock-effects-git
 ```
 
 - _Hyprland_: A compositor for Wayland
 - _wlogout_: Menu for logging out, rebooting, shutting down, etc
-- _swaylock_: Lockscreen
 - _swayidle_: DPMS, turning screen off after timeout period
+
+- _swaylock-effects-git_: Lockscreen
 
 ### Drivers
 
