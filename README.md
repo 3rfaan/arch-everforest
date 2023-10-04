@@ -27,6 +27,40 @@ $ ls /usr/share/kbd/keymaps/**/*.map.gz
 $ loadkeys de_CH-latin1
 ```
 
+### Connect to the web
+
+To connect to the web we use _iwctl_:
+
+To start _iwctl_ run the following command:
+
+```
+$ iwctl
+```
+
+We can then look for the device name:
+
+```
+[iwd]# device list
+```
+
+Then we can use the device name to scan for networks _(Note: This command won't output anything!)_:
+
+```
+[iwd]# station <device-name> scan
+```
+
+Now we can list all available networks:
+
+```
+[iwd]# station <device-name> get-networks
+```
+
+Finally, we connect to a network:
+
+```
+[iwd]# station <device-name> connect <SSID>
+```
+
 ### Console font
 
 This step is not really necessary, but the Terminus font may appear cleaner than the default one:
@@ -74,23 +108,26 @@ We will do it according to the example layout of the Arch wiki:
 ##### Create boot partition
 
 1. Press <kbd>n</kbd>.
-2. Press <kbd>Enter</kbd> to use the default first sector.
-3. Enter _+300M_ for the last sector.
-4. Press <kbd>t</kbd> and choose 1 and write _uefi_.
+1. Press <kdb>Enter</kbd> to select the default partition number.
+1. Press <kbd>Enter</kbd> to use the default first sector.
+1. Enter _+300M_ for the last sector.
+1. Press <kbd>t</kbd> and choose 1 and write _uefi_.
 
 ##### Create swap partition
 
 1. Press <kbd>n</kbd>.
-2. Press <kbd>Enter</kbd> to use the default first sector.
-3. Enter _+512M_ for the last sector.
-4. Press <kbd>t</kbd> and choose 2 and write _swap_.
+1. Press <kdb>Enter</kbd> to select the default partition number.
+1. Press <kbd>Enter</kbd> to use the default first sector.
+1. Enter _+512M_ for the last sector.
+1. Press <kbd>t</kbd> and choose 2 and write _swap_.
 
 ##### Create root partition
 
 1. Press <kbd>n</kbd>.
-2. Press <kbd>Enter</kbd> to use the default first sector.
-3. Enter <kbd>Enter</kbd> to use the default last sector.
-4. Press <kbd>t</kbd> and choose 3 and write _linux_.
+1. Press <kdb>Enter</kbd> to select the default partition number.
+1. Press <kbd>Enter</kbd> to use the default first sector.
+1. Enter <kbd>Enter</kbd> to use the default last sector.
+1. Press <kbd>t</kbd> and choose 3 and write _linux_.
 
 ⚠️\ **When you are done partitioning don't forget to press <kbd>w</kbd> to save the changes!**
 
@@ -126,18 +163,20 @@ We will do it according to the example layout of the Arch wiki:
 ##### Create swap partition
 
 1. Press <kbd>n</kbd>.
-2. Press <kbd>Enter</kbd> to select the default primary partition type.
-3. Press <kbd>Enter</kbd> to use the default first sector.
-4. Enter _+512M_ for the last sector.
-5. Press <kbd>t</kbd> and choose 1 and write _swap_.
+1. Press <kdb>Enter</kbd> to select the default partition number.
+1. Press <kbd>Enter</kbd> to select the default primary partition type.
+1. Press <kbd>Enter</kbd> to use the default first sector.
+1. Enter _+512M_ for the last sector.
+1. Press <kbd>t</kbd> and choose 1 and write _swap_.
 
 ##### Create root partition
 
 1. Press <kbd>n</kbd>.
-2. Press <kbd>Enter</kbd> to select the default primary partition type.
-3. Press <kbd>Enter</kbd> to use the default first sector.
-4. Enter <kbd>Enter</kbd> to use the default last sector.
-5. Press <kbd>t</kbd> and choose 2 and write _linux_.
+1. Press <kbd>Enter</kbd> to select the default partition number.
+1. Press <kbd>Enter</kbd> to select the default primary partition type.
+1. Press <kbd>Enter</kbd> to use the default first sector.
+1. Enter <kbd>Enter</kbd> to use the default last sector.
+1. Press <kbd>t</kbd> and choose 2 and write _linux_.
 
 ##### Make partition bootable
 
@@ -322,11 +361,25 @@ Then type `poweroff` and remove the installation disk from the virtual machine.
 
 ### Enable network connection
 
-To use _pacman_ you first have to have a working internet connection by enabling NetworkManager:
+To use _pacman_ you first have to have a working internet connection by enabling _NetworkManager_:
 
 ```
 $ systemctl start NetworkManager
 $ systemctl enable NetworkManager
+```
+
+Now we can connect to the web using _NetworkManager_:
+
+First, we list all nearby Wi-Fi networks:
+
+```
+$ nmcli device wifi list
+```
+
+We can then connect to a network:
+
+```
+$ nmcli device wifi connect <SSID> password <password>
 ```
 
 Check if you receive data from the Google Server by running this command:
@@ -388,7 +441,7 @@ $ xdg-user-dirs-update
 To install [yay](https://github.com/Jguer/yay):
 
 ```
-$ mkdir aur
+$ cd $HOME && mkdir aur
 $ cd aur
 $ git clone https://aur.archlinux.org/yay.git
 $ cd yay
@@ -480,17 +533,18 @@ $ timedatectl set-ntp true
 ### Wayland
 
 ```
-$ sudo pacman -S hyprland wlogout swayidle
+$ sudo pacman -S hyprland hyprpaper swayidle
 ```
 
 ```
-$ yay -S swaylock-effects-git
+$ yay -S wlogout swaylock-effects-git
 ```
 
-- _Hyprland_: A compositor for Wayland
-- _wlogout_: Menu for logging out, rebooting, shutting down, etc
+- _hyprland_: A compositor for Wayland
+- _hyprpaper_: Set wallpaper in Hyprland
 - _swayidle_: DPMS, turning screen off after timeout period
 
+- _wlogout_: Menu for logging out, rebooting, shutting down, etc
 - _swaylock-effects-git_: Lockscreen
 
 ### Drivers
@@ -612,6 +666,14 @@ Check these amazing wallpapers that harmonize with the Everforest theme: https:/
 
 ### Other Tools
 
+#### Programming Languages
+
+These languages are needed for _Mason_, the LSP package manager in _Neovim_:
+
+```
+$ sudo pacman -S nodejs npm rust go ruby rubygems php composer lua luarocks python python-pip julia java-runtime-common java-environment-common jdk-openjdk
+```
+
 #### CLI utilities
 
 ```
@@ -674,7 +736,7 @@ LIBSEAT_BACKEND=logind
 
 If you get the warning "Unable to load such font with such kernel version" when starting up then edit the `/etc/mkinitcpio.conf` file as follows:
 
-1. Check for the line `BINARIES=` and set it to setfont:
+1. Check for the line `BINARIES=` and set it to _setfont_:
 
 ```
 BINARIES=(setfont)
@@ -684,4 +746,10 @@ BINARIES=(setfont)
 
 ```
 HOOKS=(base udev autodetect modconf kms keyboard sd-vconsole block filesystems fsck)
+```
+
+Then run:
+
+```
+mkinitcpio -P
 ```
