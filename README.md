@@ -577,6 +577,12 @@ $ yay -S hyprshot
 $ sudo pacman -S kooha
 ```
 
+In order for _Kooha_ to work you need to install two more packages:
+
+```
+$ sudo pacman -S xdg-desktop-portal xdg-desktop-portal-hyprland
+```
+
 ### Media Player
 
 ```
