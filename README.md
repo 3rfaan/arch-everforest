@@ -14,6 +14,10 @@ _Image is coming!_
 
 Go to the download page of the official Arch Linux webpage and download the ISO image from one of the mirrors: https://archlinux.org/download/.
 
+### Prepare an installation medium
+
+Check this Arch Wiki article to prepare an installation medium, e.g. a USB flash drive or an optical disc: https://wiki.archlinux.org/title/installation_guide#Prepare_an_installation_medium
+
 ### Console keyboard layout
 
 Find out which keyboard layout you are using and then set it using `loadkeys`:
@@ -39,10 +43,10 @@ Check the name of the hard disk:
 fdisk -l
 ```
 
-Use the name (in my case _vda_) to start the `fdisk` partitioning tool:
+Use the name (in my case _sda_) to start the `fdisk` partitioning tool:
 
 ```
-fdisk /dev/vda
+fdisk /dev/sda
 ```
 
 #### UEFI or BIOS?
@@ -53,7 +57,7 @@ Run the following command:
 $ ls /sys/firmware/efi/efivars
 ```
 
-If the command shows the directory without error, then the system is booted in UEFI mode. Else you have to use BIOS mode.
+**If the command shows the directory without error, then the system is booted in [UEFI mode](#uefi-with-gpt). Else you have to use [BIOS mode](#bios-with-mbr).**
 
 #### UEFI with GPT
 
@@ -95,17 +99,17 @@ After partitioning check if the partitions have been created using `fdisk -l`.
 ##### Partition formatting
 
 ```
-$ mkfs.ext4 /dev/root_partition
-$ mkswap /dev/swap_partition
-$ mkfs.fat -F 32 /dev/efi_system_partition
+$ mkfs.ext4 /dev/<root_partition>
+$ mkswap /dev/<swap_partition>
+$ mkfs.fat -F 32 /dev/<efi_system_partition>
 ```
 
 ##### Mounting the file system
 
 ```
-$ mount /dev/root_partition /mnt
-$ mount --mkdir /dev/efi_system_partition /mnt/boot
-$ swapon /dev/swap_partition
+$ mount /dev/<root_partition> /mnt
+$ mount --mkdir /dev/<efi_system_partition> /mnt/boot
+$ swapon /dev/<swap_partition>
 ```
 
 #### BIOS with MBR
@@ -146,15 +150,15 @@ After partitioning check if the partitions have been created using `fdisk -l`.
 ##### Partition formatting
 
 ```
-$ mkfs.ext4 /dev/root_partition
-$ mkswap /dev/swap_partition
+$ mkfs.ext4 /dev/<root_partition>
+$ mkswap /dev/<swap_partition>
 ```
 
 ##### Mounting the file system
 
 ```
-$ mount /dev/root_partition /mnt
-$ swapon /dev/swap_partition
+$ mount /dev/<root_partition> /mnt
+$ swapon /dev/<swap_partition>
 ```
 
 ### Package install
@@ -341,6 +345,8 @@ $ pacman -Syu
 
 ### `sudo` Command
 
+Install the `sudo` command:
+
 ```
 $ pacman -S sudo
 ```
@@ -358,13 +364,13 @@ $ passwd <your username>
 $ EDITOR=nvim visudo
 ```
 
-Uncomment the following line:
+Uncomment the following line in order to use the `sudo` command without password prompt:
 
 ```
 %wheel ALL=(ALL) NOPASSWD: ALL
 ```
 
-You can then login as your newly created user:
+You can then log in as your newly created user:
 
 ```
 $ su <your username>
@@ -482,12 +488,6 @@ $ sudo pacman -S hyprland wlogout swaylock swayidle
 - _swaylock_: Lockscreen
 - _swayidle_: DPMS, turning screen off after timeout period
 
-### Font
-
-```
-$ sudo pacman -S noto-fonts noto-fonts-emoji ttf-firacode-nerd
-```
-
 ### Drivers
 
 **Intel**:
@@ -502,7 +502,7 @@ sudo pacman -S xf86-video-intel xf86-video-qxl intel-media-driver mesa
 sudo pacman -S xf86-video-nouveau nvidia libva-mesa-driver
 ```
 
-### Font
+### Fonts
 
 ```
 $ sudo pacman -S noto-fonts noto-fonts-emoji ttf-firacode-nerd
@@ -534,7 +534,7 @@ $ sudo pacman -S alacritty kitty
 
 ### Editor
 
-The editor should already be installed after running the _pacstrap_ command in the installation process. You can use other editors like _nano_ too.
+_Neovim_ should already be installed after running the _pacstrap_ command in the installation process. You can use other editors like _nano_ too.
 
 ```
 $ sudo pacman -S neovim neovide nano
@@ -565,10 +565,16 @@ $ sudo pacman -S ranger dolphin
 $ sudo pacman -S firefox
 ```
 
+### Screenshot
+
+```
+$ yay -S hyprshot
+```
+
 ### Screen Recorder
 
 ```
-$ sudo pacman -S kohaa
+$ sudo pacman -S kooha
 ```
 
 ### Media Player
@@ -583,13 +589,7 @@ $ sudo pacman -S vlc
 $ sudo pacman -S zathura zathura-pdf-mupdf
 ```
 
-### Screenshot
-
-```
-$ yay -S hyprshot
-```
-
-### Redshift
+### Color Temperature Adjustment
 
 ```
 $ sudo pacman -S gammastep
@@ -604,7 +604,7 @@ Check these amazing wallpapers that harmonize with the Everforest theme: https:/
 #### CLI utilities
 
 ```
-$ sudo pacman -S tldr fzf tar gzip htop neofetch
+$ sudo pacman -S tldr fzf wget curl tar unzip gzip htop neofetch
 ```
 
 ```
@@ -613,7 +613,10 @@ $ yay -S pfetch
 
 - _tldr_: Commands cheat sheet
 - _fzf_: Fuzzy finder
+- _wget_: Fetching packages from the web
+- _curl_: Fetching packages from the web
 - _tar_: Enzipping/Unzipping
+- _unzip_: Enzipping/Unzipping
 - _gzip_: Enzipping/Unzipping
 - _htop_: CLI task manager
 - _neofetch_: System information
@@ -635,7 +638,7 @@ $ sudo pacman -S fd ripgrep bat lsd tree-sitter tree-sitter-cli
 
 When done installing the necessary packages, run the `sudo reboot` command.
 
-## Ricing
+## Additional Packages
 
 - [Packer](https://github.com/wbthomason/packer.nvim)
 - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
