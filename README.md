@@ -621,7 +621,7 @@ $ sudo pacman -S waybar
 ### File Manager
 
 ```
-$ sudo pacman -S ranger dolphin
+$ sudo pacman -S ranger nemo
 ```
 
 ### Browser
