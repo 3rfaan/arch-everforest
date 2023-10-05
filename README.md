@@ -624,6 +624,12 @@ $ sudo pacman -S waybar
 $ sudo pacman -S ranger nemo
 ```
 
+For image previews in `ranger`, `kitty` needs a dependency:
+
+```
+$ sudo pacman -S python-pillow
+```
+
 ### Browser
 
 ```
@@ -639,13 +645,7 @@ $ yay -S hyprshot
 ### Screen Recorder
 
 ```
-$ sudo pacman -S obs-studio kooha
-```
-
-In order for _Kooha_ to work you need to install more packages:
-
-```
-$ sudo pacman -S xdg-desktop-portal xdg-desktop-portal-hyprland xdg-desktop-portal-wlr gst-libav gst-plugins-base gst-plugins-good gst-plugin-pipewire
+$ yay -S obs-studio-git
 ```
 
 ### Media Player
