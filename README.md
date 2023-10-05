@@ -114,7 +114,7 @@ We will do it according to the example layout of the Arch wiki:
 ##### Create boot partition
 
 1. Press <kbd>n</kbd>.
-1. Press <kdb>Enter</kbd> to select the default partition number.
+1. Press <kbd>Enter</kbd> to select the default partition number.
 1. Press <kbd>Enter</kbd> to use the default first sector.
 1. Enter _+300M_ for the last sector.
 1. Press <kbd>t</kbd> and choose 1 and write _uefi_.
@@ -122,7 +122,7 @@ We will do it according to the example layout of the Arch wiki:
 ##### Create swap partition
 
 1. Press <kbd>n</kbd>.
-1. Press <kdb>Enter</kbd> to select the default partition number.
+1. Press <kbd>Enter</kbd> to select the default partition number.
 1. Press <kbd>Enter</kbd> to use the default first sector.
 1. Enter _+512M_ for the last sector.
 1. Press <kbd>t</kbd> and choose 2 and write _swap_.
@@ -130,7 +130,7 @@ We will do it according to the example layout of the Arch wiki:
 ##### Create root partition
 
 1. Press <kbd>n</kbd>.
-1. Press <kdb>Enter</kbd> to select the default partition number.
+1. Press <kbd>Enter</kbd> to select the default partition number.
 1. Press <kbd>Enter</kbd> to use the default first sector.
 1. Enter <kbd>Enter</kbd> to use the default last sector.
 1. Press <kbd>t</kbd> and choose 3 and write _linux_.
@@ -169,7 +169,7 @@ We will do it according to the example layout of the Arch wiki:
 ##### Create swap partition
 
 1. Press <kbd>n</kbd>.
-1. Press <kdb>Enter</kbd> to select the default partition number.
+1. Press <kbd>Enter</kbd> to select the default partition number.
 1. Press <kbd>Enter</kbd> to select the default primary partition type.
 1. Press <kbd>Enter</kbd> to use the default first sector.
 1. Enter _+512M_ for the last sector.
