@@ -40,7 +40,10 @@ require("nvim-autopairs").setup()
 require("gitsigns").setup()
 
 -- Line highlighting
-require("ibl").setup()
+require("ibl").setup({
+    indent = { char = "┊" },
+    scope = { enabled = false },
+})
 
 -- Hex color highlighting
 require("colorizer").setup()

@@ -61,6 +61,12 @@ Finally, we connect to a network:
 [iwd]# station <device-name> connect <SSID>
 ```
 
+Check if you successfully established a connection by pinging the Google server:
+
+```
+$ ping 8.8.8.8
+```
+
 ### Console font
 
 This step is not really necessary, but the Terminus font may appear cleaner than the default one:
@@ -633,13 +639,13 @@ $ yay -S hyprshot
 ### Screen Recorder
 
 ```
-$ sudo pacman -S kooha
+$ sudo pacman -S obs-studio kooha
 ```
 
-In order for _Kooha_ to work you need to install two more packages:
+In order for _Kooha_ to work you need to install more packages:
 
 ```
-$ sudo pacman -S xdg-desktop-portal xdg-desktop-portal-hyprland
+$ sudo pacman -S xdg-desktop-portal xdg-desktop-portal-hyprland xdg-desktop-portal-wlr gst-libav gst-plugins-base gst-plugins-good gst-plugin-pipewire
 ```
 
 ### Media Player
