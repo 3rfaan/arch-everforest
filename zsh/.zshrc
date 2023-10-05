@@ -42,7 +42,7 @@ alias pu='sudo pacman -Syu'
 alias pi='sudo pacman -S'
 alias pr='sudo pacman -Rsu'
 alias pq='sudo pacman -Qe'
-alias autoclean='sudo pacman -Qtdq | sudo pacman -Rns -'
+alias autoclean='sudo pacman -Qtdq | sudo pacman -Rns - && yay -Sc'
 
 alias b='bat'
 alias rr='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
