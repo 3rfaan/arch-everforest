@@ -361,7 +361,7 @@ Unmount all the partitions:
 $ umount -R /mnt
 ```
 
-Then type `poweroff` and remove the installation disk from the virtual machine.
+Then type `poweroff` and remove the installation disk.
 
 ## System-related Configurations
 
@@ -475,10 +475,10 @@ $ sudo pacman -S virtualbox-guest-utils
 ### Sound
 
 ```
-$ sudo pacman -S pulseaudio
 $ sudo pacman -S alsa-utils alsa-plugins
-$ sudo pacman -S pavucontrol
+$ sudo pacman -S pipewire pipewire-alsa pipewire-pulse wireplumber
 ```
+
 ### Network
 
 ```
