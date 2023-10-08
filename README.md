@@ -648,6 +648,8 @@ $ yay -S hyprshot
 $ yay -S obs-studio-git
 ```
 
+You have to install additional packages. Please follow these instructions: https://gist.github.com/PowerBall253/2dea6ddf6974ba4e5d26c3139ffb7580
+
 ### Media Player
 
 ```
