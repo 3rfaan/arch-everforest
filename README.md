@@ -561,12 +561,6 @@ $ yay -S wlogout swaylock-effects-git
 sudo pacman -S xf86-video-intel xf86-video-qxl intel-media-driver mesa
 ```
 
-**NVIDIA**:
-
-```
-sudo pacman -S xf86-video-nouveau nvidia libva-mesa-driver
-```
-
 ### Fonts
 
 ```
@@ -679,7 +673,7 @@ Check these amazing wallpapers that harmonize with the Everforest theme: https:/
 These languages are needed for _Mason_, the LSP package manager in _Neovim_:
 
 ```
-$ sudo pacman -S nodejs npm rust go ruby rubygems php composer lua luarocks python python-pip julia java-runtime-common java-environment-common jdk-openjdk
+$ sudo pacman -S nodejs npm rust go ruby rubygems php composer lua luarocks python python-pip dotnet-runtime dotnet-sdk julia java-runtime-common java-environment-common jdk-openjdk
 ```
 
 #### CLI utilities
@@ -761,3 +755,18 @@ Then run:
 ```
 mkinitcpio -P
 ```
+
+### Missing Firmware when (re-)generating presets
+
+When `mkinitcpio -P` outputs warnings about missing firmware you can install this AUR packet:
+
+```
+$ yay -S mkinitcpio-firmware
+```
+
+Then run: 
+
+```
+mkinitcpio -P
+```
+
