@@ -553,6 +553,8 @@ $ yay -S wlogout swaylock-effects-git
 - _wlogout_: Menu for logging out, rebooting, shutting down, etc
 - _swaylock-effects-git_: Lockscreen
 
+⚠️ *Caution:* If you don't have an NVIDIA graphics card you have to delete the environment variables concerning NVIDIA in *~/.config/hyprland/hyprland.conf* later when configuring the system!
+
 ### Drivers
 
 **Intel**:
