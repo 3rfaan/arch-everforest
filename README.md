@@ -4,7 +4,7 @@ This is a full installation and customization guide for Arch Linux. This updated
 
 ## Preview
 
-![Arch Everforest Rice](https://raw.githubusercontent.com/3rfaan/arch-everforest/main/arch-everforest_short.mp4)
+https://github.com/3rfaan/arch-everforest/assets/28968837/67925316-bbc5-4717-952c-056470362965
 
 ⚠️ _Caution:_ If you are installing Arch on a virtual machine you won't have the blur effect like in the image above because there is no hardware acceleration.
 
