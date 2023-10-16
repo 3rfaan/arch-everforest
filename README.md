@@ -715,9 +715,16 @@ $ sudo pacman -S fd ripgrep bat lsd tree-sitter tree-sitter-cli
 
 When done installing the necessary packages, run the `sudo reboot` command.
 
-## Additional Packages
+## Manual Installs
 
 - [Packer](https://github.com/wbthomason/packer.nvim)
+
+After installing _Packer_ and copying the Neovim config files into your _~/.config/nvim_ folder, run the following command:
+
+```
+nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerInstall' && nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
+```
+
 - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
 - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
 - [ranger_devicons](https://github.com/alexanderjeurissen/ranger_devicons)
