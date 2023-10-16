@@ -51,7 +51,6 @@
         ]
     },
     "network": {
-        "interface": "wlp2s0",
         "format": "<span foreground=\"#3D484D\">|</span> {ifname}",
         "format-wifi": "<span foreground=\"#3D484D\">|</span> <span foreground=\"#A7C080\"></span> {signalStrength}%",
         "format-ethernet": "<span foreground=\"#3D484D\">|</span> <span foreground=\"#A7C080\">󰊗</span> {ipaddr}/{cidr}",
