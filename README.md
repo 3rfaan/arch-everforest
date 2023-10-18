@@ -668,6 +668,15 @@ $ sudo pacman -S gammastep
 
 Check these amazing wallpapers that harmonize with the Everforest theme: https://github.com/Apeiros-46B/everforest-walls
 
+### GTK Dark Theme
+
+To make GTK applications (e.g. _nemo_) use dark theme, execute the following commands:
+
+```
+$ gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
+$ gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+```
+
 ### Other Tools
 
 #### Programming Languages
