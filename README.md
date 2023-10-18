@@ -626,6 +626,12 @@ For image previews in `ranger`, `kitty` needs a dependency:
 $ sudo pacman -S python-pillow
 ```
 
+### Image Viewer
+
+```
+$ sudo pacman -S imv
+```
+
 ### Browser
 
 ```
