@@ -32,12 +32,9 @@ require("lazy").setup({
         lazy = false,
         priority = 1000,
     },
-    {
-        "3rfaan/alpha-nvim-everforest", -- Startup screen
-    },
-    {
-        "nvim-lualine/lualine.nvim", -- Status line
-    },
+
+    "3rfaan/alpha-nvim-everforest", -- Startup screen
+    "nvim-lualine/lualine.nvim",    -- Status line
 
     -------- Neovim Tools
     {
