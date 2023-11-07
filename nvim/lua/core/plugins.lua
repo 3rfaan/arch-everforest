@@ -9,71 +9,86 @@
 -- Neovim Lua Config File by Arfan Zubi
 -- PLUGINS
 
-return require("packer").startup(function(use)
-    -------- Packet Manager
-    use("wbthomason/packer.nvim") -- Packer
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+
+if not vim.loop.fs_stat(lazypath) then
+    vim.fn.system({
+        "git",
+        "clone",
+        "--filter=blob:none",
+        "https://github.com/folke/lazy.nvim.git",
+        "--branch=stable", -- latest stable release
+        lazypath,
+    })
+end
+
+vim.opt.rtp:prepend(lazypath)
+
+require("lazy").setup({
 
     -------- Appearance
-    use({
-        "3rfaan/alpha-nvim-everforest",
-        requires = { "nvim-tree/nvim-web-devicons" },
-    })
-
-    use("neanias/everforest-nvim") -- Everforest theme
-
-    use({
+    {
+        "neanias/everforest-nvim", -- Everforest theme
+        lazy = false,
+        priority = 1000,
+    },
+    {
+        "3rfaan/alpha-nvim-everforest", -- Startup screen
+    },
+    {
         "nvim-lualine/lualine.nvim", -- Status line
-        requires = { "kyazdani42/nvim-web-devicons", opt = true },
-    })
+    },
 
     -------- Neovim Tools
-    use({
+    {
         "nvim-tree/nvim-tree.lua", -- Nvim Tree, NerdTree alternative
-        requires = { "nvim-tree/nvim-web-devicons" },
-    })
+        dependencies = { "nvim-tree/nvim-web-devicons" }
+    },
 
-    use("mbbill/undotree") -- Undo Tree
+    "mbbill/undotree", -- Undo tree
 
-    use({
+    {
         "nvim-treesitter/nvim-treesitter", -- Treesitter
-        run = ":TSUpdate",
-    })
+        build = ":TSUpdate"
+    },
+    {
+        "hrsh7th/nvim-cmp", -- Autocompletion
+        dependencies = {
+            "hrsh7th/cmp-nvim-lsp",
+            "hrsh7th/cmp-buffer",
+            "hrsh7th/cmp-path",
+            "hrsh7th/cmp-cmdline",
 
-    -- Autocompletion
-    use({
-        "hrsh7th/cmp-nvim-lsp",
-        "hrsh7th/cmp-buffer",
-        "hrsh7th/cmp-path",
-        "hrsh7th/cmp-cmdline",
-        "hrsh7th/nvim-cmp",
-        "hrsh7th/cmp-vsnip",
-        "hrsh7th/vim-vsnip",
-    })
-
-    use({
+            "hrsh7th/cmp-vsnip",
+            "hrsh7th/vim-vsnip",
+        }
+    },
+    {
         "nvim-telescope/telescope.nvim", -- Telescope
         tag = "0.1.4",
-        requires = { "nvim-lua/plenary.nvim" },
-    })
-
-    -- Telescope extensions
-    use({ "smartpde/telescope-recent-files", "tom-anders/telescope-vim-bookmarks.nvim" })
-
-    ------- Editing Tools
-    use("windwp/nvim-autopairs")               -- Auto closing brackets, parenthesis etc.
-    use("alvan/vim-closetag")                  -- Auto closing HTML tags
-    use("lukas-reineke/indent-blankline.nvim") -- Line highlighting
-    use("norcalli/nvim-colorizer.lua")         -- Hex color highlighting
-    use("MattesGroeger/vim-bookmarks")         -- Bookmarks
-    use("lewis6991/gitsigns.nvim")             -- Git signs
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+            "smartpde/telescope-recent-files",
+            "tom-anders/telescope-vim-bookmarks.nvim"
+        }
+    },
 
     ------- LSP
-    use({
-        "williamboman/mason.nvim",           -- LSP packet manager
-        "williamboman/mason-lspconfig.nvim", -- lspconfig integration
-        "neovim/nvim-lspconfig",             -- LSP configuration
-    })
+    "williamboman/mason.nvim",           -- LSP packet manager
+    "williamboman/mason-lspconfig.nvim", -- lspconfig integration
+    "neovim/nvim-lspconfig",             -- LSP configuration
 
     ------- Debugging
-    use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }) -- Debugger
-end)
+    {
+        "rcarriga/nvim-dap-ui", -- Debugger
+        dependencies = { "mfussenegger/nvim-dap" }
+    },
+
+    ------- Editing Tools
+    "windwp/nvim-autopairs",               -- Auto closing brackets, parenthesis etc.
+    "alvan/vim-closetag",                  -- Auto closing HTML tags
+    "lukas-reineke/indent-blankline.nvim", -- Line highlighting
+    "norcalli/nvim-colorizer.lua",         -- Hex color highlighting
+    "MattesGroeger/vim-bookmarks",         -- Bookmarks
+    "lewis6991/gitsigns.nvim"              -- Git signs
+})
