@@ -15,7 +15,7 @@
         },
         "on-click": "activate",
         "sort-by-number": true,
-        "active-only": true
+        "active-only": false
     },
     "hyprland/window": {
         "max-length": 150
