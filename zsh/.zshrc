@@ -45,7 +45,7 @@ alias pq='sudo pacman -Qe'
 alias autoclean='sudo pacman -Qtdq | sudo pacman -Rns - && yay -Sc'
 
 alias lock='swaylock'
-alias standby='systemctl hibernate'
+alias standby='systemctl suspend'
 
 alias b='bat'
 alias rr='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
