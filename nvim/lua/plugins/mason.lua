@@ -22,7 +22,6 @@ require("mason-lspconfig").setup({
         "eslint",
         "html",
         "jsonls",
-        "ltex",
         "lua_ls",
         "marksman",
         "rust_analyzer",
@@ -33,12 +32,12 @@ require("mason-lspconfig").setup({
     automatic_installation = true,
 })
 
-local capabilities = require('cmp_nvim_lsp').default_capabilities()
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 -- lspconfig setups for installed LSP servers via Mason
 require("mason-lspconfig").setup_handlers({
-    function(server)
-        lspconfig[server].setup({
+    function(server_name)
+        lspconfig[server_name].setup({
             capabilities = capabilities
         })
     end,
