@@ -37,19 +37,18 @@ require("lazy").setup({
     "nvim-lualine/lualine.nvim",    -- Status line
 
     -------- Neovim Tools
+    "mbbill/undotree", -- Undo tree
+
     {
         "nvim-tree/nvim-tree.lua", -- Nvim Tree, NerdTree alternative
         dependencies = { "nvim-tree/nvim-web-devicons" }
     },
-
-    "mbbill/undotree", -- Undo tree
-
     {
         "nvim-treesitter/nvim-treesitter", -- Treesitter
         build = ":TSUpdate"
     },
     {
-        "hrsh7th/nvim-cmp", -- Autocompletion
+        "hrsh7th/nvim-cmp", -- Auto completion
         dependencies = {
             "hrsh7th/cmp-nvim-lsp",
             "hrsh7th/cmp-buffer",
