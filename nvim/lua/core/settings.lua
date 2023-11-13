@@ -102,6 +102,13 @@ opt.mouse = "a"
 -- Hide End-Of-Buffer symbol (~)
 opt.fillchars:append({ eob = " " })
 
+-- Settings for line highlighting
+opt.list = true
+
+-- Settings for cmp-spell
+opt.spell = true
+opt.spelllang = { "en_us", "de" }
+
 -- Opening new split panes to right and below
 opt.splitright = true
 opt.splitbelow = true
@@ -112,9 +119,6 @@ g.loaded_netrwPlugin = 1
 
 -- Show hidden NerdTree files
 g.NERDTreeShowHidden = 1
-
--- Settings for line highlighting
-opt.list = true
 
 -- GUI settings
 opt.guifont = { "FiraCode Nerd Font", ":h14" }
