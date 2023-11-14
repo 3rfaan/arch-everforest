@@ -31,7 +31,11 @@ window#waybar {
     border-radius: 15px;
 }
 
-#window, #clock {
+#window {
+    font-weight: bold;
+}
+
+#clock {
     background-color: #A7C080;
     border: 2px solid #2D353B;
     color: #2D353B;

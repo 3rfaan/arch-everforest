@@ -18,7 +18,8 @@
         "active-only": false
     },
     "hyprland/window": {
-        "max-length": 150
+        "format": "<span foreground=\"#A7C080\"> </span> {}",
+        "max-length": 100
     },
     "clock": {
         "format-alt": "{:%a, %d. %b  %H:%M}"
