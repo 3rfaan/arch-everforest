@@ -80,7 +80,6 @@ cmp.setup({
         {
             { name = "nvim_lsp" },
             { name = "vsnip" },
-            { name = "buffer" },
             { name = "path" },
             {
                 name = "spell",
@@ -91,7 +90,8 @@ cmp.setup({
                     end,
                 },
             },
-        }
+        },
+        { name = "buffer" }
     ),
     formatting = {
         format = function(_, vim_item)
