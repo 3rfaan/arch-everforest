@@ -737,7 +737,7 @@ When done installing the necessary packages, run the `sudo reboot` command.
 You can either clone the repository and move the files manually to your _~/.config_ directory or you could use the [hyprforest-installer](https://github.com/3rfaan/hyprforest-installer/):
 
 <p align="center">
-    <a href="https://github.com/3rfaan/hyprforest-installer/"><img src="https://raw.githubusercontent.com/3rfaan/hyprforest-installer/111649f70841f824daeef669a06868947c966853/hyprforest_logo.svg" /></a>
+    <a href="https://github.com/3rfaan/hyprforest-installer/"><img src="https://raw.githubusercontent.com/3rfaan/hyprforest-installer/main/hyprforest_logo.png" /></a>
 </p>
 
 ## Manual Installs
