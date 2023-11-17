@@ -796,3 +796,18 @@ Then run:
 mkinitcpio -P
 ```
 
+### org.freedesktop.Notifications: No such file or directory
+
+Install the package `notification-daemon`:
+
+```
+$ sudo pacman -S notification-daemon
+```
+
+Create the file _org.freedesktop.Notifications.service_ in `/usr/share/dbus-1/services` with following content:
+
+```
+[D-BUS Service]
+Name=org.freedesktop.Notifications
+Exec=/usr/lib/notification-daemon-1.0/notification-daemon
+```
