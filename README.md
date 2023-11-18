@@ -79,6 +79,15 @@ $ setfont Lat2-Terminus16
 
 ### Partitioning
 
+#### UEFI or BIOS?
+
+Run the following command:
+
+```
+$ ls /sys/firmware/efi/efivars
+```
+
+**If the command shows the directory without error, then the system is booted in [UEFI mode](#uefi-with-gpt). Else you have to use [BIOS mode](#bios-with-mbr).**
 Check the name of the hard disk:
 
 ```
@@ -91,19 +100,9 @@ Use the name (in my case _sda_) to start the `fdisk` partitioning tool:
 fdisk /dev/sda
 ```
 
-#### UEFI or BIOS?
-
-Run the following command:
-
-```
-$ ls /sys/firmware/efi/efivars
-```
-
-**If the command shows the directory without error, then the system is booted in [UEFI mode](#uefi-with-gpt). Else you have to use [BIOS mode](#bios-with-mbr).**
-
 #### UEFI with GPT
 
-Press <kbd>g</kbd> to create a new GPT Partition Table.
+Press <kbd>g</kbd> to create a new GUID Partition Table (GPT).
 
 We will do it according to the example layout of the Arch wiki:
 
@@ -159,7 +158,7 @@ $ swapon /dev/<swap_partition>
 
 #### BIOS with MBR
 
-Press <kbd>o</kbd> to create a new GPT Partition Table.
+Press <kbd>o</kbd> to create a new MBR partition table.
 
 We will do it according to the example layout of the Arch wiki:
 
