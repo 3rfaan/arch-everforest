@@ -88,6 +88,7 @@ $ ls /sys/firmware/efi/efivars
 ```
 
 **If the command shows the directory without error, then the system is booted in [UEFI mode](#uefi-with-gpt). Else you have to use [BIOS mode](#bios-with-mbr).**
+
 Check the name of the hard disk:
 
 ```
