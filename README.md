@@ -811,3 +811,11 @@ Create the file _org.freedesktop.Notifications.service_ in `/usr/share/dbus-1/se
 Name=org.freedesktop.Notifications
 Exec=/usr/lib/notification-daemon-1.0/notification-daemon
 ```
+
+### No such interface org.freedesktop.portal.settings
+
+Install the following package:
+
+```
+$ sudo pacman -S xdg-desktop-portal-gtk
+```
