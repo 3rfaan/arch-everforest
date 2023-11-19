@@ -22,7 +22,7 @@
         "max-length": 100
     },
     "clock": {
-        "format-alt": "{:%a, %d. %b  %H:%M}"
+        "format-alt": "{:%a, %d. %b %Y - %H:%M}"
     },
     "backlight": {
         "device": "intel_backlight",
