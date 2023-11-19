@@ -36,8 +36,8 @@
     },
     "pulseaudio": {
         "format": "<span foreground=\"#3D484D\">|</span> <span foreground=\"#A7C080\">{icon}</span> {volume}% ",
-        "format-bluetooth": "<span foreground=\"#A7C080\">{icon}</span> {volume}%",
-        "format-muted": "<span foreground=\"#A7C080\"></span>",
+        "format-bluetooth": "<span foreground=\"#3D484D\">|</span> <span foreground=\"#A7C080\">{icon}</span> {volume}% ",
+        "format-muted": "<span foreground=\"#3D484D\">|</span> <span foreground=\"#A7C080\"></span> ",
         "format-icons": {
             "headphone": "",
             "default": [
@@ -63,16 +63,11 @@
         "max-length": 50
     },
     "hyprland/language": {
-        "format": "<span foreground=\"#A7C080\">󰌌</span> {} ",
-        "format-de": "ch",
-        "format-en": "us",
-        "format-ar": "ar"
+        "format": "<span foreground=\"#A7C080\">󰌌</span> {short} <span foreground=\"#3D484D\">|</span>"
     },
     "keyboard-state": {
         "capslock": true,
-        "format": {
-            "capslock": "<span foreground=\"#3D484D\">|</span> <span foreground=\"#A7C080\">󰪛</span> {icon}"
-        },
+        "format": " <span foreground=\"#A7C080\">󰪛</span> {icon}",
         "format-icons": {
             "locked": "",
             "unlocked": ""
