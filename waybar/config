@@ -12,8 +12,7 @@
     "layer": "top",
     "height": 40,
 
-    // Load modules
-    "include": ["~/.config/waybar/modules.json"],
+    "include": ["$HOME/.config/waybar/modules.json"],
 
     "modules-left": ["hyprland/workspaces", "hyprland/window"],
     "modules-center": ["clock"],
