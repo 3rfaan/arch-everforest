@@ -86,5 +86,11 @@ require("lazy").setup({
     "lukas-reineke/indent-blankline.nvim", -- Line highlighting
     "norcalli/nvim-colorizer.lua",         -- Hex color highlighting
     "MattesGroeger/vim-bookmarks",         -- Bookmarks
-    "lewis6991/gitsigns.nvim"              -- Git signs
+    "lewis6991/gitsigns.nvim",             -- Git signs
+    {
+        "iamcco/markdown-preview.nvim",
+        cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+        ft = { "markdown" },
+        build = function() vim.fn["mkdp#util#install"]() end,
+    }
 })
