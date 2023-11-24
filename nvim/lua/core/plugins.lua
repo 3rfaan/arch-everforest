@@ -9,23 +9,7 @@
 -- Neovim Lua Config File by Arfan Zubi
 -- PLUGINS
 
-local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-
-if not vim.loop.fs_stat(lazypath) then
-    vim.fn.system({
-        "git",
-        "clone",
-        "--filter=blob:none",
-        "https://github.com/folke/lazy.nvim.git",
-        "--branch=stable", -- latest stable release
-        lazypath,
-    })
-end
-
-vim.opt.rtp:prepend(lazypath)
-
-require("lazy").setup({
-
+return {
     -------- Appearance
     {
         "neanias/everforest-nvim", -- Everforest theme
@@ -37,7 +21,8 @@ require("lazy").setup({
     "nvim-lualine/lualine.nvim",    -- Status line
 
     -------- Neovim Tools
-    "mbbill/undotree", -- Undo tree
+    "mbbill/undotree",       -- Undo tree
+    "stevearc/conform.nvim", -- Formatter
 
     {
         "nvim-tree/nvim-tree.lua", -- Nvim Tree, NerdTree alternative
@@ -87,10 +72,11 @@ require("lazy").setup({
     "norcalli/nvim-colorizer.lua",         -- Hex color highlighting
     "MattesGroeger/vim-bookmarks",         -- Bookmarks
     "lewis6991/gitsigns.nvim",             -- Git signs
+
     {
         "iamcco/markdown-preview.nvim",
         cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
         ft = { "markdown" },
         build = function() vim.fn["mkdp#util#install"]() end,
     }
-})
+}

@@ -17,7 +17,7 @@ cmd("colorscheme everforest")
 cmd("autocmd BufWritePre * lua vim.lsp.buf.format()")
 
 -- Run ":so" after writing .zshrc
-cmd("autocmd BufWritePost ~/.zshrc so %")
+--cmd("autocmd BufWritePost ~/.zshrc so %")
 
 -- Run "xrdb" after writing .Xresources
 cmd("autocmd BufWritePost ~/.Xresources !xrdb %")

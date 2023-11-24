@@ -9,9 +9,6 @@
 -- Neovim Lua Config File by Arfan Zubi
 -- MAPPINGS
 
--- Leader
-g.mapleader = ","
-
 -- Open new terminal
 kmap.set("n", "<leader>t", ":split | terminal<cr>")
 

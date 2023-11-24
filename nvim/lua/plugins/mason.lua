@@ -26,6 +26,7 @@ require("mason-lspconfig").setup({
         "marksman",
         "rust_analyzer",
         "sqlls",
+        "taplo",
         "tsserver",
         "yamlls",
     },
