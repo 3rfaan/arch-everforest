@@ -72,6 +72,7 @@ return {
     "norcalli/nvim-colorizer.lua",         -- Hex color highlighting
     "MattesGroeger/vim-bookmarks",         -- Bookmarks
     "lewis6991/gitsigns.nvim",             -- Git signs
+    "hiphish/rainbow-delimiters.nvim",     -- Brackets, parenthesis colorizing
 
     {
         "iamcco/markdown-preview.nvim",
