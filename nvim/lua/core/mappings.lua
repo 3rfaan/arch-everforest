@@ -28,10 +28,13 @@ kmap.set("n", "<c-right>", "<c-w>>")
 kmap.set("n", "<c-left>", "<c-w><")
 
 -- NerdTree
-kmap.set("n", "<leader>nt", ":NvimTreeToggle<cr>")
+kmap.set("n", "<leader>nt", vim.cmd.NvimTreeToggle)
 
 -- Undo Tree
 kmap.set("n", "<leader>ut", vim.cmd.UndotreeToggle)
+
+-- Markdown Preview
+kmap.set("n", "<leader>mp", vim.cmd.MarkdownPreview)
 
 -- Telescope
 local builtin = require("telescope.builtin")
