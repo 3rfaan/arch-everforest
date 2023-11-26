@@ -1,6 +1,6 @@
 require("conform").setup({
     formatters_by_ft = {
-        markdown = { { "prettierd", "prettier" } },
+        markdown = { "prettier" },
         ["*"] = { "codespell" },
         ["_"] = { "trim_whitespace" }
     },
