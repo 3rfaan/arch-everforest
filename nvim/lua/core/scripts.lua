@@ -12,12 +12,11 @@
 -- Colorscheme
 cmd("colorscheme everforest")
 
--- Format on save
--- LSP servers are needed for this to work
-cmd("autocmd BufWritePre * lua vim.lsp.buf.format()")
+-- Format on save (Commented out because Conform.nvim takes care of this)
+--cmd("autocmd BufWritePre * lua vim.lsp.buf.format()")
 
 -- Run ":so" after writing .zshrc
---cmd("autocmd BufWritePost ~/.zshrc so %")
+cmd("autocmd BufWritePost ~/.zshrc so %")
 
 -- Run "xrdb" after writing .Xresources
 cmd("autocmd BufWritePost ~/.Xresources !xrdb %")
