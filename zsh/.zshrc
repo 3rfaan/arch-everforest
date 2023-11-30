@@ -44,6 +44,10 @@ alias pr='sudo pacman -Rsu'
 alias pq='sudo pacman -Qe'
 alias autoclean='sudo pacman -Qtdq | sudo pacman -Rns - && yay -Sc'
 
+alias cr='cargo run'
+alias cb='cargo build'
+alias ct='cargo test'
+
 alias lock='swaylock'
 alias standby='systemctl suspend'
 
