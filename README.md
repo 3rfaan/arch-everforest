@@ -1,5 +1,7 @@
 # Arch Linux Install & Everforest Ricing
 
+![Logo](./logo.png)
+
 This is a full installation and customization guide for Arch Linux. This updated guide uses Wayland instead of X11. The theme is based off the [Everforest color scheme from sainnhe](https://github.com/sainnhe/everforest).
 
 ℹ️ **If you already have a running Arch system with the necessary packets installed, you can go to the [Quick Ricing](#quick-ricing) section.**
@@ -7,6 +9,8 @@ This is a full installation and customization guide for Arch Linux. This updated
 ## Preview
 
 https://github.com/3rfaan/arch-everforest/assets/28968837/67925316-bbc5-4717-952c-056470362965
+
+![Preview](./arch-everforest.png)
 
 ⚠️ _Caution:_ If you are installing Arch on a virtual machine you won't have the blur effect like in the image above because there is no hardware acceleration.
 
@@ -555,7 +559,7 @@ $ yay -S wlogout swaylock-effects-git
 - _wlogout_: Menu for logging out, rebooting, shutting down, etc
 - _swaylock-effects-git_: Lockscreen
 
-⚠️ *Caution:* If you don't have an NVIDIA graphics card you have to delete the environment variables concerning NVIDIA in *~/.config/hyprland/hyprland.conf* later when configuring the system!
+⚠️ _Caution:_ If you don't have an NVIDIA graphics card you have to delete the environment variables concerning NVIDIA in _~/.config/hyprland/hyprland.conf_ later when configuring the system!
 
 ### Drivers
 
@@ -608,7 +612,6 @@ $ sudo pacman -S neovim neovide nano
 ```
 $ sudo pacman -S wofi
 ```
-
 
 ### Status Bar
 
@@ -714,7 +717,7 @@ $ yay -S pfetch
 - _gzip_: Enzipping/Unzipping
 - _htop_: CLI task manager
 - _neofetch_: System information
-- _pfetch_: More concise system information 
+- _pfetch_: More concise system information
 
 #### Alternatives to traditional commands
 
@@ -790,7 +793,7 @@ When `mkinitcpio -P` outputs warnings about missing firmware you can install thi
 $ yay -S mkinitcpio-firmware
 ```
 
-Then run: 
+Then run:
 
 ```
 mkinitcpio -P
