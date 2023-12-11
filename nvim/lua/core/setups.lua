@@ -21,8 +21,7 @@ require("alpha.themes.dashboard").section.footer.val = require("alpha.fortune")(
 
 -- Everforest theme
 require("everforest").setup({
-    background = "medium",
-    transparent_background_level = 0,
+    italics = true,
 })
 
 -- Lualine status bar
