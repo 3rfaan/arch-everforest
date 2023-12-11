@@ -37,7 +37,7 @@
     },
     "pulseaudio": {
         "format": "<span foreground=\"#3D484D\">|</span> <span foreground=\"#A7C080\">{icon}</span> {volume}% ",
-        "format-bluetooth": "<span foreground=\"#3D484D\">|</span> <span foreground=\"#A7C080\">{icon}</span> {volume}% ",
+        "format-bluetooth": "<span foreground=\"#3D484D\">|</span> <span foreground=\"#A7C080\"></span> {volume}% ",
         "format-muted": "<span foreground=\"#3D484D\">|</span> <span foreground=\"#A7C080\"></span> ",
         "format-icons": {
             "headphone": "",
