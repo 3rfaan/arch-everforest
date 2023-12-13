@@ -572,7 +572,13 @@ sudo pacman -S xf86-video-intel xf86-video-qxl intel-media-driver mesa
 ### Fonts
 
 ```
-$ sudo pacman -S noto-fonts noto-fonts-emoji ttf-firacode-nerd
+$ sudo pacman -S noto-fonts ttf-opensans ttf-firacode-nerd
+```
+
+Emojis:
+
+```
+$ sudo pacman -S noto-fonts-emoji
 ```
 
 To support Asian letters:
