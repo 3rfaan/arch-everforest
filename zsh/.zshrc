@@ -82,25 +82,29 @@ export SAVEHIST=1000
 # Setting default Ranger RC to false to avoid loading it twice
 export RANGER_LOAD_DEFAULT_RC='false'
 
+# Match dotfiles without explicitly specifying the dot
+compinit
+_comp_options+=(globdots)
+
 # Loading ZSH modules
 autoload -Uz compinit
+autoload -Uz vcs_info # Git
 
+# Style control for completion system and VCS
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' menu select
 zstyle ':completion::complete:*' gain-privileges 1
 zstyle ':completion:*' rehash true                      # Rehash so compinit can automatically find new executables in $PATH
-zstyle ':vcs_info:git:*' formats 'on %F{red} %b%f '    # Set up Git Branch Details into Prompt
+zstyle ':vcs_info:*' enable git
+zstyle ':vcs_info:git:*' formats 'on %F{red} %b%f '    # Set up Git Branch details into prompt
 
-compinit
-_comp_options+=(globdots)
-
-# Load Version Control System into Prompt
-autoload -Uz vcs_info
+# Load Version Control System into prompt
 precmd() { vcs_info }
 
 # Prompt Appearance
 setopt PROMPT_SUBST
-PROMPT='%B%F{green}❬%n%f@%F{green}%m❭%f %F{blue} %1~%f%b ${vcs_info_msg_0_}>===> '
+
+PS1='%B%F{green}❬%n%f@%F{green}%m❭%f %F{blue} %1~%f%b ${vcs_info_msg_0_}>===> '
 
 # XDG user dirs
 source ~/.config/user-dirs.dirs
