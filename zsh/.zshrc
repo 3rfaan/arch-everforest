@@ -82,10 +82,6 @@ export SAVEHIST=1000
 # Setting default Ranger RC to false to avoid loading it twice
 export RANGER_LOAD_DEFAULT_RC='false'
 
-# Match dotfiles without explicitly specifying the dot
-compinit
-_comp_options+=(globdots)
-
 # Loading ZSH modules
 autoload -Uz compinit
 autoload -Uz vcs_info # Git
@@ -97,6 +93,10 @@ zstyle ':completion::complete:*' gain-privileges 1
 zstyle ':completion:*' rehash true                      # Rehash so compinit can automatically find new executables in $PATH
 zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:git:*' formats 'on %F{red} %b%f '    # Set up Git Branch details into prompt
+
+# Match dotfiles without explicitly specifying the dot
+compinit
+_comp_options+=(globdots)
 
 # Load Version Control System into prompt
 precmd() { vcs_info }
