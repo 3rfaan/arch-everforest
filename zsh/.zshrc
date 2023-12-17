@@ -47,6 +47,7 @@ alias autoclean='sudo pacman -Qtdq | sudo pacman -Rns - && yay -Sc'
 alias cr='cargo run'
 alias cb='cargo build'
 alias ct='cargo test'
+alias clippy='cargo clippy'
 
 alias lock='swaylock'
 alias standby='systemctl suspend'
