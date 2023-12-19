@@ -1,11 +1,11 @@
-# 
+#
 #  █████╗ ██╗      █████╗  ██████╗██╗████████╗████████╗██████╗ ██╗   ██╗
 # ██╔══██╗██║     ██╔══██╗██╔════╝██║╚══██╔══╝╚══██╔══╝██╔══██╗╚██╗ ██╔╝
-# ███████║██║     ███████║██║     ██║   ██║      ██║   ██████╔╝ ╚████╔╝ 
-# ██╔══██║██║     ██╔══██║██║     ██║   ██║      ██║   ██╔══██╗  ╚██╔╝  
-# ██║  ██║███████╗██║  ██║╚██████╗██║   ██║      ██║   ██║  ██║   ██║   
-# ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝╚═╝   ╚═╝      ╚═╝   ╚═╝  ╚═╝   ╚═╝   
-#                                                                       
+# ███████║██║     ███████║██║     ██║   ██║      ██║   ██████╔╝ ╚████╔╝
+# ██╔══██║██║     ██╔══██║██║     ██║   ██║      ██║   ██╔══██╗  ╚██╔╝
+# ██║  ██║███████╗██║  ██║╚██████╗██║   ██║      ██║   ██║  ██║   ██║
+# ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝╚═╝   ╚═╝      ╚═╝   ╚═╝  ╚═╝   ╚═╝
+#
 # Alacritty Config File by Arfan Zubi
 
 
@@ -105,7 +105,7 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: Fira Code Nerd Font
+    family: BigBlueTermPlus Nerd Font
 
     # The `style` can be specified to pick a specific face.
     #style: Regular
@@ -144,7 +144,7 @@ font:
     #style: Bold Italic
 
   # Point size
-  size: 14.0
+  size: 13.0
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
@@ -174,8 +174,8 @@ font:
 colors:
   # Default colors
   primary:
-    background: '#2D353B'
-    foreground: '#D3C6AA'
+    background: '0xfdf6e3'
+    foreground: '0x5c6a72'
 
     # Bright and dim foreground colors
     #
@@ -209,15 +209,15 @@ colors:
   # Search colors
   #
   # Colors used for the search bar and match highlighting.
-  search:
+  #search:
     # Allowed values are CellForeground/CellBackground, which reference the
     # affected cell, or hexadecimal colors like #ff00ff.
-    matches:
-      foreground: '#2D353B'
-      background: '#83C092'
-    focused_match:
-      foreground: '#2D353B'
-      background: '#A7C080'
+    #matches:
+    #  foreground: '0xffffff'
+    #  background: '0x0000ee'
+    #focused_match:
+    #  foreground: '0xffffff'
+    #  background: '0x00cdcd'
 
   # Keyboard hints
   #hints:
@@ -268,25 +268,25 @@ colors:
 
   # Normal colors
   normal:
-    black:   '#7A8478'
-    red:     '#E67E80'
-    green:   '#A7C080'
-    yellow:  '#DBBC7F'
-    blue:    '#7FBBB3'
-    magenta: '#D699B6'
-    cyan:    '#83C092'
-    white:   '#D3C6AA'
+    black:   '0x5c6a72'
+    red:     '0xf85552'
+    green:   '0x8da101'
+    yellow:  '0xdfa000'
+    blue:    '0x3a94c5'
+    magenta: '0xdf69ba'
+    cyan:    '0x35a77c'
+    white:   '0xe0dcc7'
 
-  # Bright colors
+  # Bright Colors
   bright:
-    black:   '#859289'
-    red:     '#E67E80'
-    green:   '#A7C080'
-    yellow:  '#DBBC7F'
-    blue:    '#7FBBB3'
-    magenta: '#D699B6'
-    cyan:    '#83C092'
-    white:   '#D3C6AA'
+    black:   '0x5c6a72'
+    red:     '0xf85552'
+    green:   '0x8da101'
+    yellow:  '0xdfa000'
+    blue:    '0x3a94c5'
+    magenta: '0xdf69ba'
+    cyan:    '0x35a77c'
+    white:   '0xe0dcc7'
 
   # Dim colors
   #
