@@ -646,7 +646,7 @@ $ sudo pacman -S imv
 ### Browser
 
 ```
-$ sudo pacman -S firefox
+$ sudo pacman -S firefox chromium
 ```
 
 ### Screenshot
