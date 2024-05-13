@@ -17,8 +17,8 @@ return {
         priority = 1000,
     },
 
-    "3rfaan/alpha-nvim-everforest", -- Startup screen
-    "nvim-lualine/lualine.nvim",    -- Status line
+    "goolord/alpha-nvim",        -- Startup screen
+    "nvim-lualine/lualine.nvim", -- Status line
 
     -------- Neovim Tools
     "mbbill/undotree",       -- Undo tree
@@ -58,12 +58,6 @@ return {
     "williamboman/mason.nvim",           -- LSP packet manager
     "williamboman/mason-lspconfig.nvim", -- lspconfig integration
     "neovim/nvim-lspconfig",             -- LSP configuration
-
-    ------- Debugging
-    {
-        "rcarriga/nvim-dap-ui", -- Debugger
-        dependencies = { "mfussenegger/nvim-dap" }
-    },
 
     ------- Editing Tools
     "windwp/nvim-autopairs",               -- Auto closing brackets, parenthesis etc.

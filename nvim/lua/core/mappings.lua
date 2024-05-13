@@ -48,17 +48,3 @@ kmap.set("n", "<leader>fh", builtin.help_tags, {})
 kmap.set("n", "<leader>rf", extensions.recent_files.pick, {})
 kmap.set("n", "<leader>fm", extensions.vim_bookmarks.all, {})
 kmap.set("n", "<leader>fm-", extensions.vim_bookmarks.current_file, {})
-
--- Nvim DAP
-local dap, dapui = require("dap"), require("dapui")
-
-kmap.set("n", "<leader>dc", function() dap.continue() end)
-kmap.set("n", "<leader>dl", function() dap.step_over() end)
-kmap.set("n", "<leader>dj", function() dap.step_into() end)
-kmap.set("n", "<leader>dk", function() dap.step_out() end)
-kmap.set("n", "<leader>db", function() dap.toggle_breakpoint() end)
-kmap.set("n", "<leader>dB", function() dap.set_breakpoint(vim.fn.input("Breakpoint condition: ")) end)
-kmap.set("n", "<leader>dlp", function() dap.set_breakpoint(nil, nil, vim.fn.input("Log point message: ")) end)
-kmap.set("n", "<leader>dr", function() dap.repl.open() end)
-kmap.set("n", "<leader>drl", function() dap.run_last() end)
-kmap.set("n", "<leader>dui", function() dapui.toggle() end)

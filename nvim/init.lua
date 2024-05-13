@@ -32,5 +32,4 @@ require("plugins.mason")            -- Mason LSP & DAP servers
 require("plugins.nvim-cmp")         -- Autocompletion
 require("plugins.treesitter")       -- Treesitter syntax highlighting
 require("plugins.conform")          -- Formatter
-require("plugins.dap")              -- Debug Adapter Protocol
 require("plugins.gitsigns-config")  -- Gitsigns mappings
