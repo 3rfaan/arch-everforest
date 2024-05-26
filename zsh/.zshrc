@@ -66,6 +66,7 @@ alias ip='ip --color=auto'
 export LESS='-R --use-color -Dd+r$Du+b'
 export MANPAGER='less -R --use-color -Dd+r -Du+b'
 #export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export BAT_THEME='OneHalfLight'
 
 # Setting Default Editor
 export EDITOR='nvim'
