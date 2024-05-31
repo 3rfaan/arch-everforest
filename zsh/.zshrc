@@ -108,6 +108,9 @@ setopt PROMPT_SUBST
 
 PS1='%B%F{green}❬%n%f@%F{green}%m❭%f %F{blue} %1~%f%b ${vcs_info_msg_0_}>===> '
 
+# ZSH profile
+source ~/.profile
+
 # XDG user dirs
 source ~/.config/user-dirs.dirs
 
