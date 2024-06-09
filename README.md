@@ -728,13 +728,13 @@ $ yay -S pfetch
 #### Alternatives to traditional commands
 
 ```
-$ sudo pacman -S fd ripgrep bat lsd tree-sitter tree-sitter-cli
+$ sudo pacman -S fd ripgrep bat exa tree-sitter tree-sitter-cli
 ```
 
 - _fd_: Alternative to _find_ command
 - _ripgrep_: Alternative to _grep_ command
 - _bat_: Alternative to _cat_ command
-- _lsd_: Alternative to _ls_ command
+- _exa_: Alternative to _ls_ command
 - _tree-sitter_ & _tree-sitter-cli_: Real syntax highlighting in Neovim
 
 ### Reboot
