@@ -566,7 +566,7 @@ $ yay -S wlogout swaylock-effects-git
 **Intel**:
 
 ```
-sudo pacman -S xf86-video-intel xf86-video-qxl intel-media-driver mesa
+sudo pacman -S xf86-video-intel xf86-video-qxl intel-media-driver libva-intel-driver mesa
 ```
 
 ### Fonts
