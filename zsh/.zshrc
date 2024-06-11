@@ -52,6 +52,7 @@ alias clippy='cargo clippy'
 alias lock='swaylock'
 alias standby='systemctl suspend'
 
+alias nf='neofetch'
 alias b='bat'
 alias rr='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
 alias z='zathura'
@@ -66,7 +67,7 @@ alias ip='ip --color=auto'
 export LESS='-R --use-color -Dd+r$Du+b'
 export MANPAGER='less -R --use-color -Dd+r -Du+b'
 #export MANPAGER="sh -c 'col -bx | bat -l man -p'"
-export BAT_THEME='OneHalfLight'
+export BAT_THEME='Catppuccin Latte'
 
 # Setting Default Editor
 export EDITOR='nvim'
@@ -106,7 +107,7 @@ precmd() { vcs_info }
 # Prompt Appearance
 setopt PROMPT_SUBST
 
-PS1='%B%F{green}❬%n%f@%F{green}%m❭%f %F{blue} %1~%f%b ${vcs_info_msg_0_}>===> '
+PS1='%B%F{blue}❬%n%f@%F{blue}%m❭%f %F{blue} %1~%f%b ${vcs_info_msg_0_} '
 
 # ZSH profile
 source ~/.profile
