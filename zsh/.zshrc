@@ -17,7 +17,7 @@ fi
 # Aliases
 alias q='exit'
 alias ..='cd ..'
-alias ls='exa -F -l --icons'
+alias ls='exa -l -F --icons --hyperlink'
 alias l='ls -l'
 alias la='ls -a'
 alias lla='ls -la'
