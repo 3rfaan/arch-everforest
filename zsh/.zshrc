@@ -52,7 +52,7 @@ alias clippy='cargo clippy'
 alias lock='swaylock'
 alias standby='systemctl suspend'
 
-alias nf='neofetch'
+alias ff='fastfetch'
 alias b='bat'
 alias rr='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
 alias z='zathura'
