@@ -566,7 +566,13 @@ $ yay -S wlogout swaylock-effects-git
 **Intel**:
 
 ```
-sudo pacman -S xf86-video-intel xf86-video-qxl intel-media-driver mesa
+sudo pacman -S mesa intel-media-driver libva-intel-driver vulkan-intel
+```
+
+**NVIDIA**:
+
+```
+sudo pacman -S nvidia
 ```
 
 ### Fonts
@@ -610,7 +616,7 @@ $ sudo pacman -S alacritty kitty
 _Neovim_ should already be installed after running the _pacstrap_ command in the installation process. You can use other editors like _nano_ too.
 
 ```
-$ sudo pacman -S neovim neovide nano
+$ sudo pacman -S neovim gedit nano
 ```
 
 ### Program Launcher
@@ -728,13 +734,13 @@ $ yay -S pfetch
 #### Alternatives to traditional commands
 
 ```
-$ sudo pacman -S fd ripgrep bat exa tree-sitter tree-sitter-cli
+$ sudo pacman -S fd ripgrep bat eza tree-sitter tree-sitter-cli
 ```
 
 - _fd_: Alternative to _find_ command
 - _ripgrep_: Alternative to _grep_ command
 - _bat_: Alternative to _cat_ command
-- _exa_: Alternative to _ls_ command
+- _eza_: Alternative to _ls_ command (fork of `exa`)
 - _tree-sitter_ & _tree-sitter-cli_: Real syntax highlighting in Neovim
 
 ### Reboot
