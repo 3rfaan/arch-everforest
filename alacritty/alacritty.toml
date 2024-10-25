@@ -9,6 +9,7 @@
 # Alacritty Config File by Arfan Zubi
 
 
+[general]
 live_config_reload = true
 
 [window]
