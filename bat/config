@@ -1,17 +1,17 @@
-# 
+#
 # ██████╗  █████╗ ████████╗
 # ██╔══██╗██╔══██╗╚══██╔══╝
-# ██████╔╝███████║   ██║   
-# ██╔══██╗██╔══██║   ██║   
-# ██████╔╝██║  ██║   ██║   
-# ╚═════╝ ╚═╝  ╚═╝   ╚═╝   
-#                          
-# Bat Config File by Arfan Zubi                         
+# ██████╔╝███████║   ██║
+# ██╔══██╗██╔══██║   ██║
+# ██████╔╝██║  ██║   ██║
+# ╚═════╝ ╚═╝  ╚═╝   ╚═╝
+#
+# Bat Config File by Arfan Zubi
 
 
 # Specify desired highlighting theme (e.g. "TwoDark"). Run `bat --list-themes`
 # for a list of all available themes
---theme="everforest"
+--theme="Catppuccin Macchiato"
 
 # Enable this to use italic text on the terminal. This is not supported on all
 # terminal emulators (like tmux, by default):

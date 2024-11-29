@@ -11,74 +11,93 @@ Waybar Config File by Arfan Zubi
 
 */
 
+@import url("./macchiato.css");
+
 * {
-    font-family: 'FiraCode Nerd Font', sans-serif;
+    font-family: "Hack Nerd Font";
+    font-weight: bold;
     font-size: 16px;
     min-height: 0;
 }
 
-window#waybar {
-    background: rgba(45, 53, 59, 0.9);
-    border: 2px solid rgba(61, 72, 77, 0.9);
-    color: #D3C6AA;
+#waybar {
+    color: @text;
+    background: transparent;
 }
 
-#window, #clock, #system, #keyboard, #hardware {
-    margin: 5px;
-    padding: 0 10px;
-    background-color: #272E33;
-    border: 2px solid #3D484D;
-    border-radius: 15px;
-}
-
-#window {
-    font-weight: bold;
-}
-
-#clock {
-    background-color: #A7C080;
-    border: 2px solid #2D353B;
-    color: #2D353B;
-    font-weight: bold;
+#workspaces,
+#workspaces button,
+#workspaces button.active,
+#workspaces button:hover {
+    border-radius: 0.5rem;
 }
 
 #workspaces {
-    margin-right: 10px;
-    font-weight: bold;
+    background-color: rgba(54, 58, 79, 0.6);
+    margin: 5px 0 0 0.5rem;
 }
 
 #workspaces button {
-    border: none;
-    border-radius: 0;
-    color: #D3C6AA;
-    transition: all 0.3s ease-in-out;
+    color: @text;
+    padding: 0.5rem;
 }
 
 #workspaces button.active {
-    background-color: #A7C080;
-    color: #2D353B;
-    transition: all 0.3s ease-in-out;
-}
-
-#workspaces button.focused {
-    background-color: #A7C080;
+    color: @blue;
 }
 
 #workspaces button:hover {
-    box-shadow: inherit;
-    text-shadow: inherit;
-    background: #3D484D;
-    border: none;
-    color: #D3C6AA;
+    color: @lavender;
+    background: @surface1;
+    border-color: @surface0;
 }
 
-#keyboard-state {
-    margin-right: 7px;
+#workspaces button.urgent {
+    color: @red;
 }
 
-#custom-wlogout {
-    margin-left: 7px;
-    padding: 0 15px;
-    background-color: #A7C080;
-    color: #2D353B;
+#clock,
+#pulseaudio,
+#backlight,
+#battery,
+#language,
+#custom-lock,
+#custom-power {
+    background-color: rgba(54, 58, 79, 0.6);
+    padding: 0.5rem 1rem;
+    margin: 5px 0;
+}
+
+#clock {
+    color: @blue;
+    border-radius: 0.5rem;
+}
+
+#pulseaudio {
+    color: @maroon;
+    border-radius: 0.5rem 0 0 0.5rem;
+    margin-left: 1rem;
+}
+
+#backlight {
+    color: @yellow;
+}
+
+#battery,
+#battery.charging {
+    color: @green;
+}
+
+#battery.warning:not(.charging) {
+    color: @red;
+}
+
+#language {
+    color: @lavender;
+}
+
+#custom-power {
+    margin-right: 1rem;
+    border-radius: 0 0.5rem 0.5rem 0;
+    color: @red;
 }

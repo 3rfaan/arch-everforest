@@ -16,15 +16,10 @@ require("nvim-tree").setup()
 require("alpha").setup(require("alpha.themes.startify").config)
 require("alpha.themes.dashboard").section.footer.val = require("alpha.fortune")() -- Quotes
 
--- Everforest theme
-require("everforest").setup({
-    italics = true,
-})
-
 -- Lualine status bar
 require("lualine").setup({
     options = {
-        theme = "everforest",
+        theme = "auto",
         component_separators = " ",
         section_separators = { left = "", right = "" },
     },

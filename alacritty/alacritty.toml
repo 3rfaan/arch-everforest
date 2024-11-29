@@ -10,6 +10,7 @@
 
 
 [general]
+import = ["~/.config/alacritty/catppuccin-macchiato.toml"]
 live_config_reload = true
 
 [window]
@@ -19,21 +20,8 @@ decorations = "None"
 resize_increments = true
 
 [font]
-normal = { family = "BigBlueTermPlus Nerd Font", style = "Regular" }
+normal = { family = "Hack Nerd Font", style = "Bold" }
 size = 13
-
-[colors]
-primary = { foreground = "#1D1F21", background = "#FDF6E3" }
-
-[colors.normal]
-black = "#5C6A72"
-blue = "#3A94C5"
-cyan = "#35A77C"
-green = "#8DA101"
-magenta = "#DF69BA"
-red = "#F85552"
-white = "#E0DCC7"
-yellow = "#DFA000"
 
 [cursor]
 style = { blinking = "On" }

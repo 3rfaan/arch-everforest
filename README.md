@@ -1,6 +1,4 @@
-# Arch Linux Install & Everforest Ricing
-
-![Logo](./logo.png)
+# Arch Linux Install & Ricing
 
 This is a full installation and customization guide for Arch Linux. This updated guide uses Wayland instead of X11. The theme is based off the [Everforest color scheme from sainnhe](https://github.com/sainnhe/everforest).
 
@@ -8,9 +6,7 @@ This is a full installation and customization guide for Arch Linux. This updated
 
 ## Preview
 
-https://github.com/3rfaan/arch-everforest/assets/28968837/67925316-bbc5-4717-952c-056470362965
-
-![Preview](./arch-everforest.png)
+![Preview](./preview.png)
 
 ⚠️ _Caution:_ If you are installing Arch on a virtual machine you won't have the blur effect like in the image above because there is no hardware acceleration.
 
@@ -217,7 +213,7 @@ $ swapon /dev/<swap_partition>
 For a minimal system download and install these packages:
 
 ```
-$ pacstrap -K /mnt base base-devel linux linux-firmware e2fsprogs dhcpcd networkmanager sof-firmware git neovim man-db man-pages texinfo
+$ pacstrap -K /mnt base base-devel linux linux-firmware e2fsprogs networkmanager sof-firmware git neovim man-db man-pages texinfo
 ```
 
 ℹ️ If you are installing Arch Linux on a computer with **ARM architecture** add the following to the above `pacstrap` command:
@@ -502,7 +498,7 @@ $ sudo systemctl enable dhcpcd
 ### Bluetooth
 
 ```
-$ sudo pacman -S bluez bluez-utils blueman
+$ sudo pacman -S bluez bluez-utils
 $ sudo systemctl enable bluetooth
 ```
 
@@ -545,19 +541,19 @@ $ timedatectl set-ntp true
 ### Wayland
 
 ```
-$ sudo pacman -S hyprland hyprpaper swayidle
+$ sudo pacman -S hyprland hyprpaper hyprlock hypridle
 ```
 
 ```
-$ yay -S wlogout swaylock-effects-git
+$ yay -S wlogout
 ```
 
 - _hyprland_: A compositor for Wayland
 - _hyprpaper_: Set wallpaper in Hyprland
-- _swayidle_: DPMS, turning screen off after timeout period
+- _hyprlock_: Lockscreen
+- _hypridle_: DPMS, turning screen off after timeout period
 
 - _wlogout_: Menu for logging out, rebooting, shutting down, etc
-- _swaylock-effects-git_: Lockscreen
 
 ⚠️ _Caution:_ If you don't have an NVIDIA graphics card you have to delete the environment variables concerning NVIDIA in _~/.config/hyprland/hyprland.conf_ later when configuring the system!
 

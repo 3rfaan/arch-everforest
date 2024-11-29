@@ -12,9 +12,10 @@
 return {
     -------- Appearance
     {
-        "neanias/everforest-nvim", -- Everforest theme
-        lazy = false,
+        "catppuccin/nvim",
+        name = "catppuccin",
         priority = 1000,
+        lazy = false,
     },
 
     "goolord/alpha-nvim",        -- Startup screen
