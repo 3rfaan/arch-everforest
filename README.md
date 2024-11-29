@@ -477,6 +477,7 @@ $ sudo pacman -S virtualbox-guest-utils
 ### Sound
 
 ```
+$ sudo pacman -S pavucontrol
 $ sudo pacman -S alsa-utils alsa-plugins
 $ sudo pacman -S pipewire pipewire-alsa pipewire-pulse wireplumber
 ```
