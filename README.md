@@ -1,6 +1,6 @@
 # Arch Linux Install & Ricing
 
-This is a full installation and customization guide for Arch Linux. This updated guide uses Wayland instead of X11. The theme is based off the [Everforest color scheme from sainnhe](https://github.com/sainnhe/everforest).
+This is a full installation and customization guide for Arch Linux.
 
 ℹ️ **If you already have a running Arch system with the necessary packets installed, you can go to the [Quick Ricing](#quick-ricing) section.**
 
@@ -746,10 +746,10 @@ When done installing the necessary packages, run the `sudo reboot` command.
 
 ### Quick Ricing
 
-You can either clone the repository and move the files manually to your _~/.config_ directory or you could use the [hyprforest-installer](https://github.com/3rfaan/hyprforest-installer/):
+You can either clone the repository and move the files manually to your _~/.config_ directory or you could use the [auto-ricer](https://github.com/3rfaan/autoricer):
 
 <p align="center">
-    <a href="https://github.com/3rfaan/hyprforest-installer/"><img src="https://raw.githubusercontent.com/3rfaan/hyprforest-installer/main/hyprforest_logo.png" /></a>
+    <a href="https://github.com/3rfaan/autoricer"><img src="https://raw.githubusercontent.com/3rfaan/hyprforest-installer/main/hyprforest_logo.png" /></a>
 </p>
 
 ## Manual Installs
