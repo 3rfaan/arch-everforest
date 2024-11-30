@@ -64,10 +64,11 @@ alias grep='grep --color=auto'
 alias ip='ip --color=auto'
 
 # Colored pagers
+export PAGER='less -RF'
 export LESS='-R --use-color -Dd+r$Du+b'
 export MANPAGER='less -R --use-color -Dd+r -Du+b'
 #export MANPAGER="sh -c 'col -bx | bat -l man -p'"
-export BAT_THEME='Catppuccin Latte'
+export BAT_THEME='Catppuccin Macchiato'
 
 # Setting Default Editor
 export EDITOR='nvim'
