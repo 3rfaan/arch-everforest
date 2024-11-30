@@ -684,10 +684,6 @@ $ sudo pacman -S zathura zathura-pdf-mupdf
 $ sudo pacman -S gammastep
 ```
 
-### Wallpapers
-
-Check these amazing wallpapers that harmonize with the Everforest theme: https://github.com/Apeiros-46B/everforest-walls
-
 ### GTK Dark Theme
 
 To make GTK applications (e.g. _nemo_) use dark theme, execute the following commands:
