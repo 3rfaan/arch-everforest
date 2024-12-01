@@ -43,7 +43,7 @@ Waybar Config File by Arfan Zubi
 }
 
 #workspaces button.active {
-    color: @blue;
+    color: @mauve;
 }
 
 #workspaces button:hover {
