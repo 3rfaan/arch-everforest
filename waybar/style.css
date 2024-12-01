@@ -22,7 +22,7 @@ Waybar Config File by Arfan Zubi
 
 #waybar {
     color: @text;
-    background: transparent;
+    background: rgba(36, 39, 58, 0.5);
 }
 
 #workspaces,
@@ -33,8 +33,8 @@ Waybar Config File by Arfan Zubi
 }
 
 #workspaces {
-    background-color: rgba(54, 58, 79, 0.6);
-    margin: 5px 0 0 0.5rem;
+    background-color: rgba(54, 58, 79, 0.5);
+    margin: 5px 0 5px 1rem;
 }
 
 #workspaces button {
