@@ -479,7 +479,7 @@ $ sudo pacman -S virtualbox-guest-utils
 ```
 $ sudo pacman -S pavucontrol
 $ sudo pacman -S alsa-utils alsa-plugins
-$ sudo pacman -S pipewire pipewire-alsa pipewire-pulse wireplumber
+$ sudo pacman -S pipewire wireplumber
 ```
 
 ### Network
@@ -664,7 +664,13 @@ $ yay -S hyprshot
 $ yay -S obs-studio-git
 ```
 
-You have to install additional packages. Please follow these instructions: https://gist.github.com/PowerBall253/2dea6ddf6974ba4e5d26c3139ffb7580
+Required for screen capture:
+
+```
+$ sudo pacman -S xdg-desktop-portal-hyprland
+```
+
+You may have to install additional packages. Please follow these instructions: https://gist.github.com/brunoanc/2dea6ddf6974ba4e5d26c3139ffb7580
 
 ### Media Player
 
