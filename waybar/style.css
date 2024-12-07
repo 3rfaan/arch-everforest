@@ -14,9 +14,9 @@ Waybar Config File by Arfan Zubi
 @import url("./macchiato.css");
 
 * {
-    font-family: "Hack Nerd Font";
+    font-family: "JetBrainsMono Nerd Font";
     font-weight: bold;
-    font-size: 16px;
+    font-size: 17px;
     min-height: 0;
 }
 
@@ -29,7 +29,7 @@ Waybar Config File by Arfan Zubi
 #workspaces button,
 #workspaces button.active,
 #workspaces button:hover {
-    border-radius: 0.5rem;
+    border-radius: 0.75rem;
 }
 
 #workspaces {
@@ -70,12 +70,12 @@ Waybar Config File by Arfan Zubi
 
 #clock {
     color: @mauve;
-    border-radius: 0.5rem;
+    border-radius: 0.75rem;
 }
 
 #pulseaudio {
     color: @maroon;
-    border-radius: 0.5rem 0 0 0.5rem;
+    border-radius: 0.75rem 0 0 0.75rem;
     margin-left: 1rem;
 }
 
@@ -98,6 +98,6 @@ Waybar Config File by Arfan Zubi
 
 #custom-power {
     margin-right: 1rem;
-    border-radius: 0 0.5rem 0.5rem 0;
+    border-radius: 0 0.75rem 0.75rem 0;
     color: @red;
 }

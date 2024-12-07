@@ -20,8 +20,8 @@ decorations = "None"
 resize_increments = true
 
 [font]
-normal = { family = "Hack Nerd Font", style = "Bold" }
-size = 13
+normal = { family = "JetBrainsMono Nerd Font", style = "Bold" }
+size = 14
 
 [cursor]
 style = { blinking = "On" }
