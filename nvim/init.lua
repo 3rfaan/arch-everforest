@@ -27,7 +27,7 @@ require("core.setups")              -- Setup of plugins
 require("core.mappings")            -- Mappings
 require("core.scripts")             -- Scripts
 
-require("plugins.lsp-config-setup") -- LSPconfig setup
+require("plugins.lspconfig")        -- LSPconfig setup
 require("plugins.mason")            -- Mason LSP & DAP servers
 require("plugins.nvim-cmp")         -- Autocompletion
 require("plugins.treesitter")       -- Treesitter syntax highlighting
