@@ -24,6 +24,7 @@ return {
     -------- Neovim Tools
     "mbbill/undotree",       -- Undo tree
     "stevearc/conform.nvim", -- Formatter
+    "folke/which-key.nvim",  -- Show keymaps
 
     {
         "nvim-tree/nvim-tree.lua", -- Nvim Tree, NerdTree alternative

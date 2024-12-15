@@ -10,31 +10,28 @@
 -- MAPPINGS
 
 -- Open new terminal
-kmap.set("n", "<leader>t", ":split | terminal<cr>")
+kmap.set("n", "<leader>t", ":split | terminal<cr>", { desc = "Open new terminal" })
 
 -- Redo
-kmap.set("n", "U", "<C-r>")
+kmap.set("n", "U", "<C-r>", { desc = "Redo" })
 
 -- Split navigation using CTRL + {j, k, h, l}
-kmap.set("n", "<c-k>", "<c-w>k")
-kmap.set("n", "<c-j>", "<c-w>j")
-kmap.set("n", "<c-l>", "<c-w>l")
-kmap.set("n", "<c-h>", "<c-w>h")
+kmap.set("n", "<c-k>", "<c-w>k", { desc = "Split window up" })
+kmap.set("n", "<c-j>", "<c-w>j", { desc = "Split window down" })
+kmap.set("n", "<c-l>", "<c-w>l", { desc = "Split window right" })
+kmap.set("n", "<c-h>", "<c-w>h", { desc = "Split window left" })
 
 -- Resize split windows using arrow keys
-kmap.set("n", "<c-up>", "<c-w>-")
-kmap.set("n", "<c-down>", "<c-w>+")
-kmap.set("n", "<c-right>", "<c-w>>")
-kmap.set("n", "<c-left>", "<c-w><")
+kmap.set("n", "<c-up>", "<c-w>-", { desc = "Resize split window up" })
+kmap.set("n", "<c-down>", "<c-w>+", { desc = "Resize split window down" })
+kmap.set("n", "<c-right>", "<c-w>>", { desc = "Resize split window right" })
+kmap.set("n", "<c-left>", "<c-w><", { desc = "Resize split window left" })
 
 -- NerdTree
-kmap.set("n", "<leader>nt", vim.cmd.NvimTreeToggle)
+kmap.set("n", "<leader>nt", vim.cmd.NvimTreeToggle, { desc = "Toggle NerdTree" })
 
 -- Undo Tree
-kmap.set("n", "<leader>ut", vim.cmd.UndotreeToggle)
-
--- Markdown Preview
-kmap.set("n", "<leader>mp", vim.cmd.MarkdownPreview)
+kmap.set("n", "<leader>ut", vim.cmd.UndotreeToggle, { desc = "Toggle UndoTree" })
 
 -- Telescope
 local builtin = require("telescope.builtin")
