@@ -44,7 +44,7 @@ kmap.set("n", "<leader>ff", builtin.find_files, { desc = "Telescope find files" 
 kmap.set("n", "<leader>fg", builtin.live_grep, { desc = "Telescope live grep" })
 kmap.set("n", "<leader>fb", builtin.buffers, { desc = "Telescope buffers" })
 kmap.set("n", "<leader>fh", builtin.help_tags, { desc = "Telescope help tags" })
-kmap.set("n", "<leader>fk", builtin.keymaps, {desc="Telescope keymaps"})
+kmap.set("n", "<leader>fk", builtin.keymaps, { desc = "Telescope keymaps" })
 
 kmap.set("n", "<leader>rf", extensions.recent_files.pick, { desc = "Telescope recent files" })
 kmap.set("n", "<leader>fm", extensions.vim_bookmarks.all, { desc = "Telescope all bookmarks" })
