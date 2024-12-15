@@ -68,11 +68,4 @@ return {
     "MattesGroeger/vim-bookmarks",         -- Bookmarks
     "lewis6991/gitsigns.nvim",             -- Git signs
     "hiphish/rainbow-delimiters.nvim",     -- Brackets, parenthesis colorizing
-
-    {
-        "iamcco/markdown-preview.nvim",
-        cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-        ft = { "markdown" },
-        build = function() vim.fn["mkdp#util#install"]() end,
-    }
 }
