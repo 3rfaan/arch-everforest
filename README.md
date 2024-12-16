@@ -702,6 +702,12 @@ $ sudo pacman -S gammastep
 
 ### GTK Dark Theme
 
+Download the Adwaita themes:
+
+```
+$ sudo pacman -S gnome-themes-extra
+```
+
 To make GTK applications (e.g. _nemo_) use dark theme, execute the following commands:
 
 ```
