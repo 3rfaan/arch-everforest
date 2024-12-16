@@ -54,7 +54,6 @@ alias standby='systemctl suspend'
 
 alias ff='fastfetch'
 alias b='bat'
-alias rr='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
 alias z='zathura'
 
 # Colored output
@@ -83,9 +82,6 @@ export HISTSIZE=1000
 # Maximum number of commands stores in HISTFILE
 export SAVEHIST=1000
 
-# Setting default Ranger RC to false to avoid loading it twice
-export RANGER_LOAD_DEFAULT_RC='false'
-
 # Loading ZSH modules
 autoload -Uz compinit
 autoload -Uz vcs_info # Git
@@ -109,6 +105,16 @@ precmd() { vcs_info }
 setopt PROMPT_SUBST
 
 PS1='%B%F{blue}❬%n%f@%F{blue}%m❭%f %F{blue} %1~%f%b ${vcs_info_msg_0_} '
+
+# Yazi shell
+function y() {
+    local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+    yazi "$@" --cwd-file="$tmp"
+    if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+        builtin cd -- "$cwd"
+    fi
+    \rm -f -- "$tmp"
+}
 
 # ZSH profile
 source ~/.profile

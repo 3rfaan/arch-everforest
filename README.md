@@ -631,14 +631,24 @@ $ sudo pacman -S waybar
 ### File Manager
 
 ```
-$ sudo pacman -S ranger nemo
+$ sudo pacman -S yazi nemo
 ```
 
-For image previews in `ranger`, `kitty` needs a dependency:
+For image previews `alacritty` needs this dependency (kitty is built-in):
 
 ```
-$ sudo pacman -S python-pillow
+$ sudo pacman -S ueberzugpp
 ```
+
+Catppuccin theme:
+
+- [catppuccin-macchiato.yazi](https://github.com/yazi-rs/flavors/tree/main/catppuccin-macchiato.yazi)
+
+Install these plugins for best experience:
+
+- [full-border.yazi](https://github.com/yazi-rs/plugins/tree/main/full-border.yazi)
+- [relative-motions.yazi](https://github.com/dedukun/relative-motions.yazi)
+- [bookmarks.yazi](https://github.com/dedukun/bookmarks.yazi)
 
 ### Image Viewer
 
@@ -758,7 +768,6 @@ You can either clone the repository and move the files manually to your _~/.conf
 
 - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
 - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
-- [ranger_devicons](https://github.com/alexanderjeurissen/ranger_devicons)
 
 ## Troubleshooting
 
