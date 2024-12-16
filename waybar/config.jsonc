@@ -11,7 +11,8 @@
     "layer": "top",
     "position": "top",
     "modules-left": [
-        "hyprland/workspaces"
+        "hyprland/workspaces",
+        "hyprland/window"
     ],
     "modules-center": [
         "clock"
@@ -30,6 +31,10 @@
         "on-scroll-down": "hyprctl dispatch workspace e+1",
         "format": "{icon}",
         "all-outputs": true
+    },
+    "hyprland/window": {
+        "separate-outputs": true,
+        "max-length": 150
     },
     "clock": {
         "timezone": "Europe/Zurich",

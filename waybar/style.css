@@ -20,7 +20,7 @@ Waybar Config File by Arfan Zubi
     min-height: 0;
 }
 
-#waybar {
+window#waybar {
     color: @text;
     background: @mantle;
 }
@@ -33,13 +33,13 @@ Waybar Config File by Arfan Zubi
 }
 
 #workspaces {
-    background-color: rgba(54, 58, 79, 0.5);
     margin: 5px 0 5px 1rem;
+    background-color: rgba(54, 58, 79, 0.5);
 }
 
 #workspaces button {
-    color: @text;
     padding: 0.5rem;
+    color: @text;
 }
 
 #workspaces button.active {
@@ -56,6 +56,7 @@ Waybar Config File by Arfan Zubi
     color: @red;
 }
 
+#window,
 #clock,
 #pulseaudio,
 #backlight,
@@ -63,9 +64,20 @@ Waybar Config File by Arfan Zubi
 #language,
 #custom-lock,
 #custom-power {
-    background-color: rgba(54, 58, 79, 0.5);
-    padding: 0.5rem 1rem;
     margin: 5px 0;
+    padding: 0.5rem 1rem;
+    background-color: rgba(54, 58, 79, 0.5);
+}
+
+#window {
+    margin-left: 1rem;
+    color: @blue;
+    border-radius: 1.5rem;
+}
+
+/* make window module transparent when no windows present */
+window#waybar.empty #window {
+    background-color: transparent;
 }
 
 #clock {
@@ -74,9 +86,9 @@ Waybar Config File by Arfan Zubi
 }
 
 #pulseaudio {
+    margin-left: 1rem;
     color: @maroon;
     border-radius: 1.5rem 0 0 1.5rem;
-    margin-left: 1rem;
 }
 
 #backlight {
@@ -98,6 +110,6 @@ Waybar Config File by Arfan Zubi
 
 #custom-power {
     margin-right: 1rem;
-    border-radius: 0 1.5rem 1.5rem 0;
     color: @red;
+    border-radius: 0 1.5rem 1.5rem 0;
 }
