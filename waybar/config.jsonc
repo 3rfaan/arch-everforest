@@ -42,6 +42,19 @@
         "format-alt": " {:%d.%m.%Y}",
         "format": " {:%H:%M}"
     },
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{icon} {volume}%",
+        "format-muted": "",
+        "format-icons": {
+            "default": [
+                "",
+                "",
+                " "
+            ]
+        },
+        "on-click": "pavucontrol"
+    },
     "backlight": {
         "device": "intel_backlight",
         "format": "{icon} {percent}%",
@@ -77,18 +90,8 @@
             ""
         ]
     },
-    "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
-        "format": "{icon} {volume}%",
-        "format-muted": "",
-        "format-icons": {
-            "default": [
-                "",
-                "",
-                " "
-            ]
-        },
-        "on-click": "pavucontrol"
+    "hyprland/language": {
+        "format": "  {short}"
     },
     "custom/lock": {
         "tooltip": false,
@@ -99,8 +102,5 @@
         "tooltip": false,
         "on-click": "wlogout &",
         "format": "⏻"
-    },
-    "hyprland/language": {
-        "format": "  {}"
     }
 }

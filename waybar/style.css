@@ -85,6 +85,15 @@ window#waybar.empty #window {
     border-radius: 1.5rem;
 }
 
+#battery,
+#battery.charging {
+    color: @green;
+}
+
+#battery.warning:not(.charging) {
+    color: @red;
+}
+
 #pulseaudio {
     margin-left: 1rem;
     color: @maroon;
@@ -93,15 +102,6 @@ window#waybar.empty #window {
 
 #backlight {
     color: @yellow;
-}
-
-#battery,
-#battery.charging {
-    color: @green;
-}
-
-#battery.warning:not(.charging) {
-    color: @red;
 }
 
 #language {
