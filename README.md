@@ -732,7 +732,7 @@ $ sudo pacman -S tldr fzf wget curl tar unzip gzip htop neofetch
 ```
 
 ```
-$ yay -S pfetch
+$ yay -S pfetch-rs
 ```
 
 - _tldr_: Commands cheat sheet
