@@ -11,25 +11,25 @@ Waybar Config File by Arfan Zubi
 
 */
 
-@import url("./macchiato.css");
+@import url("./mocha.css");
 
 * {
     font-family: "JetBrainsMono Nerd Font";
     font-weight: bold;
-    font-size: 17px;
+    font-size: 15px;
     min-height: 0;
 }
 
 #waybar {
     color: @text;
-    background: rgba(36, 39, 58, 0.5);
+    background: @mantle;
 }
 
 #workspaces,
 #workspaces button,
 #workspaces button.active,
 #workspaces button:hover {
-    border-radius: 0.75rem;
+    border-radius: 1.5rem;
 }
 
 #workspaces {
@@ -63,19 +63,19 @@ Waybar Config File by Arfan Zubi
 #language,
 #custom-lock,
 #custom-power {
-    background-color: rgba(54, 58, 79, 0.6);
+    background-color: rgba(54, 58, 79, 0.5);
     padding: 0.5rem 1rem;
     margin: 5px 0;
 }
 
 #clock {
     color: @mauve;
-    border-radius: 0.75rem;
+    border-radius: 1.5rem;
 }
 
 #pulseaudio {
     color: @maroon;
-    border-radius: 0.75rem 0 0 0.75rem;
+    border-radius: 1.5rem 0 0 1.5rem;
     margin-left: 1rem;
 }
 
@@ -98,6 +98,6 @@ Waybar Config File by Arfan Zubi
 
 #custom-power {
     margin-right: 1rem;
-    border-radius: 0 0.75rem 0.75rem 0;
+    border-radius: 0 1.5rem 1.5rem 0;
     color: @red;
 }

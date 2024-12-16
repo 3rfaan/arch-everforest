@@ -10,7 +10,7 @@
 -- SCRIPTS
 
 -- Colorscheme
-cmd("colorscheme catppuccin-macchiato")
+cmd("colorscheme catppuccin-mocha")
 
 -- Format on save (Commented out because Conform.nvim takes care of this)
 --cmd("autocmd BufWritePre * lua vim.lsp.buf.format()")

@@ -21,12 +21,12 @@ window {
 
 button {
     margin: 5px;
-    color: #CAD3F5;
-    background-color: #363A4F;
+    color: #CDD6F4;
+    background-color: #1E1E2E;
     background-size: 20%;
     background-repeat: no-repeat;
     background-position: center;
-    border: 5px solid #8AADF4;
+    border: 2px solid #8AADF4;
     box-shadow: none;
     text-shadow: none;
     transition: background-color 0.2s ease-in-out;

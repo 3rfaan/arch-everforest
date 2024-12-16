@@ -67,7 +67,7 @@ export PAGER='less -RF'
 export LESS='-R --use-color -Dd+r$Du+b'
 export MANPAGER='less -R --use-color -Dd+r -Du+b'
 #export MANPAGER="sh -c 'col -bx | bat -l man -p'"
-export BAT_THEME='Catppuccin Macchiato'
+export BAT_THEME='Catppuccin Mocha'
 
 # Setting Default Editor
 export EDITOR='nvim'

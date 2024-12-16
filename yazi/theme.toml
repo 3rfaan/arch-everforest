@@ -8,7 +8,7 @@
 # Yazi Config File by Arfan Zubi
 
 [flavor]
-use = "catppuccin-macchiato"
+use = "catppuccin-mocha"
 
 # For upcoming Yazi 0.4 (nightly version):
-dark = "catppuccin-macchiato"
+dark = "catppuccin-mocha"
