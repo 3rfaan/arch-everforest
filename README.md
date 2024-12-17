@@ -6,7 +6,10 @@ This is a full installation and customization guide for Arch Linux.
 
 ## Preview
 
-![Preview](./preview.png)
+![Preview 1](./preview_1.png)
+![Preview 2](./preview_2.png)
+![Preview 3](./preview_3.png)
+![Preview 4](./preview_4.png)
 
 ⚠️ _Caution:_ If you are installing Arch on a virtual machine you won't have the blur effect like in the image above because there is no hardware acceleration.
 
