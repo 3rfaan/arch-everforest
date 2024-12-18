@@ -578,7 +578,7 @@ sudo pacman -S nvidia
 ### Fonts
 
 ```
-$ sudo pacman -S noto-fonts ttf-opensans ttf-firacode-nerd
+$ sudo pacman -S noto-fonts ttf-opensans ttf-jetbrains-mono-nerd
 ```
 
 Emojis:
@@ -731,13 +731,14 @@ $ sudo pacman -S nodejs npm rust go ruby rubygems php composer lua luarocks pyth
 #### CLI utilities
 
 ```
-$ sudo pacman -S tldr fzf wget curl tar unzip gzip htop neofetch
+$ sudo pacman -S tmux tldr fzf wget curl tar unzip gzip htop fastfetch
 ```
 
 ```
 $ yay -S pfetch-rs
 ```
 
+- _tmux_: Terminal mutliplexer
 - _tldr_: Commands cheat sheet
 - _fzf_: Fuzzy finder
 - _wget_: Fetching packages from the web
@@ -746,7 +747,7 @@ $ yay -S pfetch-rs
 - _unzip_: Enzipping/Unzipping
 - _gzip_: Enzipping/Unzipping
 - _htop_: CLI task manager
-- _neofetch_: System information
+- _fastfetch_: System information
 - _pfetch_: More concise system information
 
 #### Alternatives to traditional commands
