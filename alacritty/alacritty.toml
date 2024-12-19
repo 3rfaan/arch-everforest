@@ -20,7 +20,7 @@ decorations = "None"
 resize_increments = true
 
 [font]
-normal = { family = "JetBrainsMono Nerd Font", style = "Bold" }
+normal = { family = "JetBrainsMono Nerd Font", style = "Semibold" }
 size = 13
 
 [cursor]
