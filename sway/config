@@ -24,7 +24,7 @@ set $down j
 set $up k
 set $right l
 
-set $term alacritty
+set $term foot
 set $menu wmenu-run
 
 ### OUTPUT CONFIGURATION
@@ -34,7 +34,7 @@ output * bg $HOME/Documents/wallpapers/arch_wallpaper.jpg fill
 
 # Monitors
 output $laptop pos 0 1440 res 1920x1080@60Hz
-output $monitor pos 0 0 res 3440x1440@60Hz scale 1.1
+output $monitor pos 0 0 res 3440x1440@60Hz
 
 # Focus monitor on launch
 focus output $monitor
@@ -46,9 +46,9 @@ bindswitch --reload --locked lid:off output $laptop enable
 ### IDLE CONFIGURATION
 
 exec swayidle -w \
-         timeout 300 'swaylock -f -c 000000' \
+         timeout 300 'hyprlock' \
          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-         before-sleep 'swaylock -f -c 000000'
+         before-sleep 'hyprlock'
 
 ### INPUT CONFIGURATION
 
@@ -212,7 +212,7 @@ bar {
 
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
-    status_command while date +'%Y-%m-%d %X'; do sleep 1; done
+    status_command while date +'%d.%m.%Y %H:%M'; do sleep 1; done
 
     colors {
         statusline #ffffff
