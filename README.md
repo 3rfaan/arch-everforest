@@ -542,7 +542,9 @@ $ timedatectl set-ntp true
 
 ## Graphical User Interface (GUI) Settings
 
-### Wayland
+In this repository you will find config files for `Hyprland` and `sway`. If you want fancy effects and animations go with `Hyprland`. For a more minimal setup I'd suggest `sway`.
+
+### Hyprland
 
 ```
 $ sudo pacman -S hyprland hyprpaper hyprlock hypridle
@@ -560,6 +562,27 @@ $ yay -S wlogout
 - _wlogout_: Menu for logging out, rebooting, shutting down, etc
 
 ⚠️ _Caution:_ If you don't have an NVIDIA graphics card you have to delete the environment variables concerning NVIDIA in _~/.config/hyprland/hyprland.conf_ later when configuring the system!
+
+### Sway
+
+```
+$ sudo pacman -S sway swaybg saylock swayidle
+```
+
+- _sway_: A compositor for Wayland
+- _swaybg_: Set wallpaper in sway
+- _swaylock_: Lockscreen
+- _swayidle_: DPMS, turning screen off after timeout period
+
+Download these programs to work with the default `sway` config or change them in `~/.config/sway/config`:
+
+```
+$ sudo pacman -S foot wmenu grim
+```
+
+- _foot_: Terminal emulator
+- _wmenu_: Program launcher
+- _grim_: Screenshot utility
 
 ### Drivers
 
