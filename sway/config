@@ -24,13 +24,13 @@ set $down j
 set $up k
 set $right l
 
-set $term foot
+set $term alacritty
 set $menu wmenu-run
 
 ### OUTPUT CONFIGURATION
 
 # Wallpaper
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+output * bg $HOME/Documents/wallpapers/arch_wallpaper.jpg fill
 
 # Monitors
 output $laptop pos 0 1440 res 1920x1080@60Hz

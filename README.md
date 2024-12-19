@@ -566,12 +566,11 @@ $ yay -S wlogout
 ### Sway
 
 ```
-$ sudo pacman -S sway swaybg saylock swayidle
+$ sudo pacman -S sway swaybg swayidle
 ```
 
 - _sway_: A compositor for Wayland
 - _swaybg_: Set wallpaper in sway
-- _swaylock_: Lockscreen
 - _swayidle_: DPMS, turning screen off after timeout period
 
 Download these programs to work with the default `sway` config or change them in `~/.config/sway/config`:

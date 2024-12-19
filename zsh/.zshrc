@@ -9,10 +9,15 @@
 # ZSH Config File by Arfan Zubi
 
 
-# Autostart Hyprland at Login
-if [ -z "${WAYLAND_DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
-    exec Hyprland
-fi
+# Autostart Hyprland at login
+# if [ -z "${WAYLAND_DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
+#     exec Hyprland
+# fi
+
+# Autostart sway at login
+# if [ -z "$WAYLAND_DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 1 ] ; then
+#     exec sway
+# fi
 
 # Aliases
 alias q='exit'
@@ -46,6 +51,7 @@ alias ct='cargo test'
 alias clippy='cargo clippy'
 
 alias lock='hyprlock'
+alias logout='loginctl terminate-user $USER'
 alias standby='systemctl suspend'
 
 alias ff='fastfetch'
