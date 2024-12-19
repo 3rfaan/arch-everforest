@@ -72,6 +72,7 @@ export MANPAGER='less -R --use-color -Dd+r -Du+b'
 export BAT_THEME='Catppuccin Mocha'
 
 # Setting Default Editor
+export TERM='alacritty'
 export EDITOR='nvim'
 export VISUAL='nvim'
 
