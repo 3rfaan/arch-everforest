@@ -22,12 +22,12 @@ return {
     "nvim-lualine/lualine.nvim", -- Status line
 
     -------- Neovim Tools
-    "mbbill/undotree",       -- Undo tree
-    "stevearc/conform.nvim", -- Formatter
-    "folke/which-key.nvim",  -- Show keymaps
+    "stevearc/conform.nvim",              -- Formatter
+    "mbbill/undotree",                    -- Undo tree
+    require("plugins.configs.which-key"), -- Show keymaps
 
     {
-        "nvim-tree/nvim-tree.lua", -- Nvim Tree, NerdTree alternative
+        "nvim-tree/nvim-tree.lua", -- NvimTree
         dependencies = { "nvim-tree/nvim-web-devicons" }
     },
     {
@@ -62,11 +62,11 @@ return {
     "neovim/nvim-lspconfig",             -- LSP configuration
 
     ------- Editing Tools
-    "windwp/nvim-autopairs",               -- Auto closing brackets, parenthesis etc.
-    "alvan/vim-closetag",                  -- Auto closing HTML tags
     "lukas-reineke/indent-blankline.nvim", -- Line highlighting
-    "norcalli/nvim-colorizer.lua",         -- Hex color highlighting
-    "MattesGroeger/vim-bookmarks",         -- Bookmarks
     "lewis6991/gitsigns.nvim",             -- Git signs
+    "windwp/nvim-autopairs",               -- Auto closing brackets, parenthesis etc.
+    "norcalli/nvim-colorizer.lua",         -- Hex color highlighting
     "hiphish/rainbow-delimiters.nvim",     -- Brackets, parenthesis colorizing
+    "MattesGroeger/vim-bookmarks",         -- Bookmarks
+
 }
