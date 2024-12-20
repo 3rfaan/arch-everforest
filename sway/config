@@ -24,6 +24,7 @@ set $down j
 set $up k
 set $right l
 
+# Default programs
 set $term foot
 set $menu wmenu-run
 
@@ -31,6 +32,9 @@ set $menu wmenu-run
 
 # Wallpaper
 output * bg $HOME/Documents/wallpapers/arch_wallpaper.jpg fill
+
+# Set font
+font pango:Noto Sans Medium 10
 
 # Monitors
 output $laptop pos 0 1440 res 1920x1080@60Hz
