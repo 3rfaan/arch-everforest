@@ -753,36 +753,43 @@ $ sudo pacman -S nodejs npm rust go ruby rubygems php composer lua luarocks pyth
 #### CLI utilities
 
 ```
-$ sudo pacman -S tmux tldr fzf wget curl tar unzip gzip htop fastfetch
+$ sudo pacman -S curl fastfetch fzf gzip htop lazygit tar tmux unzip wget
+```
+
+```
+$ sudo pacman -S tree-sitter tree-sitter-cli
 ```
 
 ```
 $ yay -S pfetch-rs
 ```
 
-- _tmux_: Terminal mutliplexer
-- _tldr_: Commands cheat sheet
-- _fzf_: Fuzzy finder
-- _wget_: Fetching packages from the web
 - _curl_: Fetching packages from the web
-- _tar_: Enzipping/Unzipping
-- _unzip_: Enzipping/Unzipping
+- _fastfetch_: System information
+- _fzf_: Fuzzy finder
 - _gzip_: Enzipping/Unzipping
 - _htop_: CLI task manager
-- _fastfetch_: System information
+- _lazygit_: Git CLI tool
+- _tar_: Enzipping/Unzipping
+- _tmux_: Terminal mutliplexer
+- _unzip_: Enzipping/Unzipping
+- _wget_: Fetching packages from the web
+
+- _tree-sitter_ & _tree-sitter-cli_: Real syntax highlighting in Neovim
+
 - _pfetch_: More concise system information
 
 #### Alternatives to traditional commands
 
 ```
-$ sudo pacman -S fd ripgrep bat eza tree-sitter tree-sitter-cli
+$ sudo pacman -S bat eza fd ripgrep tldr
 ```
 
-- _fd_: Alternative to _find_ command
-- _ripgrep_: Alternative to _grep_ command
 - _bat_: Alternative to _cat_ command
 - _eza_: Alternative to _ls_ command (fork of `exa`)
-- _tree-sitter_ & _tree-sitter-cli_: Real syntax highlighting in Neovim
+- _fd_: Alternative to _find_ command
+- _ripgrep_: Alternative to _grep_ command
+- _tldr_: Commands cheat sheet
 
 ### Reboot
 
